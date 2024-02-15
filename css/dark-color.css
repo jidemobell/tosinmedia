@@ -1,0 +1,107 @@
+/**
+ * Dark Color
+ */
+
+body{
+    background: #100f0f;
+    color: #ffffff;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    color: #ffffff;
+}
+
+input, button, select, textarea{
+    color: #dddddd;
+}
+
+::-webkit-input-placeholder {
+    color: #dddddd;
+}
+
+:-webkit-placeholder {
+    color: #dddddd;
+}
+  
+:-moz-placeholder {
+    color: #dddddd;
+}
+
+::-moz-placeholder {
+    color: #dddddd;
+}
+
+:-ms-input-placeholder {
+    color: #dddddd;
+}
+
+.photoghor-form-inner .photoghor-form-input input::-webkit-input-placeholder, 
+.photoghor-form-inner .photoghor-form-input textarea::-webkit-input-placeholder, 
+.photoghor-form-inner .photoghor-form-input select::-webkit-input-placeholder{
+    color: #dddddd;
+}
+.photoghor-form-inner .photoghor-form-input input:-webkit-placeholder, 
+.photoghor-form-inner .photoghor-form-input textarea:-webkit-placeholder, 
+.photoghor-form-inner .photoghor-form-input select:-webkit-placeholder{
+    color: #dddddd;
+}
+.photoghor-form-inner .photoghor-form-input input:-moz-placeholder, 
+.photoghor-form-inner .photoghor-form-input textarea:-moz-placeholder, 
+.photoghor-form-inner .photoghor-form-input select:-moz-placeholder{
+    color: #dddddd;
+}
+.photoghor-form-inner .photoghor-form-input input::-moz-placeholder, 
+.photoghor-form-inner .photoghor-form-input textarea::-moz-placeholder, 
+.photoghor-form-inner .photoghor-form-input select::-moz-placeholder{
+    color: #dddddd;
+}
+.photoghor-form-inner .photoghor-form-input input:-ms-input-placeholder, 
+.photoghor-form-inner .photoghor-form-input textarea:-ms-input-placeholder, 
+.photoghor-form-inner .photoghor-form-input select:-ms-input-placeholder{
+    color: #dddddd;
+}
+
+.about-image::before {
+    border: 40px solid rgba(0, 0, 0, 0.5);
+}
+
+.readmore-button, .readmore-button:visited, .readmore-button:link{
+    color: #ffffff;
+}
+.readmore-button:hover, .readmore-button:visited:hover, .readmore-button:link:hover{
+    color: #eab454;
+}
+
+.bg-white{
+    background: #000000 !important;
+}
+
+.textblock h1 a, .textblock h2 a, .textblock h3 a, .textblock h4 a, .textblock h5 a, .textblock h6 a{
+    color: #ffffff;
+}
+
+.g-photo-pagination ul li button{
+    color: #ffffff;
+}
+
+.g-photo-arrows button{
+    color: #ffffff;
+    border-color: #ffffff
+}
+
+.testimonial-slider button[class*="testimonial-arrow"]{
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+.g-photo-image{
+    box-shadow:  0 3px 10px rgba(85, 85, 85, 0.5);
+}
+
+.contact-info .single-info a{
+    color: #ffffff;
+}
+
+.testimonial {
+    background: #000;
+}

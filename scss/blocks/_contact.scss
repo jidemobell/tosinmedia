@@ -1,0 +1,56 @@
+/**
+ * Contact Styles
+ */
+
+.contact-info-wrapper{
+
+    @media #{$md-layout}{
+        margin-top: 60px;
+    }
+
+    @media #{$sm-layout}{
+        margin-top: 50px;
+    }
+
+}
+
+.contact-info{
+    margin-top: 55px;
+    padding-right: 100px;
+    .single-info{
+        h5{
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p{
+            margin-bottom: 0;
+        }
+
+        a{
+            color: $body-color;
+            &:hover{
+                color: $theme-color;
+            }
+        }
+
+        &:not(:last-child){
+            margin-bottom: 35px;
+        }
+
+    }
+
+    @media #{$md-layout}{
+        margin-top: 30px;
+    }
+
+    @media #{$sm-layout}{
+        margin-top: 30px;
+    }
+
+}
+
+@media #{$md-layout}, #{$sm-layout}{
+    form#contact-form {
+        margin-top: -20px;
+    }
+}
