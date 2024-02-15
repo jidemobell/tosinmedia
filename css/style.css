@@ -29,8 +29,8 @@
 	|
 	|
 	|___Blocks Styles
-	|	|___ Header 
-	|	|___ Navigation 
+	|	|___ Header
+	|	|___ Navigation
 	|	|___ Hero Slider
 	|	|___ Fullpage Styles
 	|	|___ Photo Section
@@ -1233,7 +1233,7 @@ blockquote {
 }
 
 .bg-image-1 {
-  background-image: url(../img/bg/bg-image-1.jpg);
+  background-image: url(../img/bg/bg-image-1-*.jpg);
 }
 
 .bg-image-2 {
