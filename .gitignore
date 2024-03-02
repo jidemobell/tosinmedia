@@ -42,7 +42,7 @@ _testmain.go
 #builds/**/images/*
 #*.ogg
 #*.mp3
-#*.mp4
+*.mp4
 #*.png
 #*.jpeg
 *.psd
