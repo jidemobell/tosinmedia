@@ -57,9 +57,10 @@
             <ul>
               <li><a href="/" aria-label="Open navigation menu"><i class="fa fa-facebook"></i></a></li>
               <li><a href="/" aria-label="Open navigation menu"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="/" aria-label="Open navigation menu"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="/" aria-label="Open navigation menu"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="/" aria-label="Open navigation menu"><i class="fa fa-pinterest-p"></i></a></li>
+              <!-- <li><a href="/" aria-label="Open navigation menu"><i class="fa-brands fa-tiktok"></i></a></li> -->
+              <!-- <li><a href="/" aria-label="Open navigation menu"><i class="fa fa-google-plus"></i></a></li> -->
+              <!-- <li><a href="/" aria-label="Open navigation menu"><i class="fa fa-linkedin"></i></a></li> -->
+              <!-- <li><a href="/" aria-label="Open navigation menu"><i class="fa fa-pinterest-p"></i></a></li> -->
             </ul>
           </div>
         </div>

@@ -1,5 +1,6 @@
 <!-- src/routes/+layout.svelte -->
 <script>
+  import { page } from '$app/stores';
   import { onMount } from 'svelte';
 
 
@@ -63,7 +64,10 @@
 
    
   import Header from '$lib/Header.svelte';
-  import Footer from '$lib/Footer.svelte';
+  // import Footer from '$lib/Footer.svelte';
+  // $: console.log($page.url.pathname);
+  $: showHeader = $page.url.pathname === '/photo-gallery';
+  // $: console.log('showHeader:', showHeader);
 </script>
 
 <svelte:head>
@@ -90,9 +94,12 @@
 
 
 <!-- <body> -->
+<!-- <Header /> -->
+{#if !showHeader}
   <Header />
+{/if}
 <slot />
-<Footer />
+<!-- <Footer /> -->
 <!-- </body> -->
 
 
