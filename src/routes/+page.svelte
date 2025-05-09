@@ -1,79 +1,16 @@
 <script>
   import About from "../lib/About.svelte";
+  import HeroArea from "../lib/HeroArea.svelte";
 
 </script>
-<!-- <!doctype html>
-<html class="no-js" lang="zxx"> -->
-
-<!-- <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>TOSEEN photography and videography</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/icon.png">
-
-	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/plugins.css">
-
-	<link rel="stylesheet" href="css/style.css">
-
-	<link rel="stylesheet" href="css/custom.css">
-</head> -->
-
 <main>
 	<!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-
 	<!-- Add your site or application content here -->
-
 	<!-- Wrapper -->
 	<div id="wrapper" class="wrapper">
-
 		<span id="home"></span>
-
-		<!-- Header -->
-		<!-- <header class="header sticky-header fixed-header">
-			<div class="container">
-				<div class="header-inner d-none d-lg-flex">
-					<div class="header-logo">
-						<a href="/">
-							<img src="img/logo/logo-light.png" alt="logo">
-						</a>
-					</div>
-					<div class="header-navigation">
-						<button class="header-navigation-trigger" aria-label="Open navigation menu">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
-						<nav class="main-navigation">
-							<ul class="section-name">
-								<li data-menuanchor="first-section" class="active"><a href="#first-section">Welcome</a></li>
-								<li data-menuanchor="second-section"><a href="#second-section">About</a></li>
-								<li data-menuanchor="third-section"><a href="#third-section">Portfolios</a></li>
-								<li data-menuanchor="fourth-section"><a href="#fourth-section">Testimonials</a></li>
-								<li data-menuanchor="fifth-section"><a href="#fifth-section">Contact</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<div class="mobile-menu-wrapper d-block d-lg-none">
-					<div class="mobile-menu clearfix">
-						<a href="/" class="mobile-logo">
-							<img src="img/logo/logo-light.png" alt="mobile logo">
-						</a>
-					</div>
-				</div>
-			</div>
-		</header> -->
-		<!--// Header -->
-
 		<!-- Fullpage Area Name -->
 		<ul id="section-name" class="section-name">
 			<li data-menuanchor="first-section" class="active"><a href="#first-section">Welcome</a></li>
@@ -85,92 +22,13 @@
 		<!--// Fullpage Area Name -->
 
 		<div id="fullpage">
-
 			<div class="section" data-anchor="first-section">
-
-				<!-- Hero Area -->
-				<div class="hero-area">
-
-					<div class="hero-slider hero-silder-active">
-
-						<!-- Hero Area Single Slide : video section -->
-						<!-- <video width="100%" height="300px" id="player" controls loop >
-							<source src="images/videos/IntroAmen.mp4" type="video/mp4">
-			     </video> -->
-					 <video id="background-video" autoplay loop muted>
-						<!-- <source src="img/videos/output_video.webm" type="video/webm"> -->
-						<source src="https://wheaddle.sirv.com/tosinmakanjuola/IntroAmen.webm" type="video/mp4">
-					</video>
-					
-						<!--// Hero Area Single Slide -->
-
-						<!-- Hero Area Single Slide -->
-						<div class="hero-single-slide bg-image-1">
-							<div class="container">
-								<div class="hero-slide-text">
-									<h1>Stay With Your <br>Dream & Passion</h1>
-									<p>Photography is about capturing <br> souls not smiles </p>
-								</div>
-							</div>
-						</div>
-						<!--// Hero Area Single Slide -->
-
-						<!-- Hero Area Single Slide -->
-						<div class="hero-single-slide bg-image-2">
-							<div class="container">
-								<div class="hero-slide-text">
-									<h1>Stay With Your <br>Dream & Passion</h1>
-									<p>Photography is about capturing <br> souls not smiles </p>
-								</div>
-							</div>
-						</div>
-						<!--// Hero Area Single Slide -->
-
-						<!-- Hero Area Single Slide -->
-						<!-- <div class="hero-single-slide bg-image-3">
-							<div class="container">
-								<div class="hero-slide-text">
-									<h1>Stay With Your <br>Dream & Passion</h1>
-									<p>Photography is about capturing <br> souls not smiles </p>
-								</div>
-							</div>
-						</div> -->
-						<!--// Hero Area Single Slide -->
-
-					</div>
-
-					<div class="hero-area-outer">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="social-icons">
-										<ul>
-											<li><a href="/" aria-label="Open navigation menu"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="/" aria-label="Open navigation menu"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="/" aria-label="Open navigation menu"><i class="fa fa-google-plus"></i></a></li>
-											<li><a href="/" aria-label="Open navigation menu"><i class="fa fa-linkedin"></i></a></li>
-											<li><a href="/" aria-label="Open navigation menu"><i class="fa fa-pinterest-p"></i></a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="hero-pagination"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<!--// Hero Area -->
-
+			 <HeroArea/>
 			</div>
       <About/>
-			
 			<div class="section" data-anchor="third-section">
-
 				<section id="portfolio-area" class="cr-section portfolio-gallery-area section-padding-xlg bg-white">
 					<div class="container">
-
 						<div class="g-photo-topside">
 							<div class="g-photo-topside-single">
 								<div class="row align-items-end">
