@@ -1182,19 +1182,19 @@ blockquote {
 }
 
 .bg-image-1 {
-  background-image: url(../img/newbg/sallygap.png);
+  background-image: url(/img/newbg/sallygap.png);
 }
 
 .bg-image-2 {
-  background-image: url(../img/bg/bg-image-2.jpg);
+  background-image: url(/img/bg/bg-image-2.jpg);
 }
 
 .bg-image-3 {
-  background-image: url(../img/bg/bg-image-3.jpg);
+  background-image: url(/img/bg/bg-image-3.jpg);
 }
 
 .bg-image-4 {
-  background-image: url(../img/bg/bg-image-4.jpg);
+  background-image: url(/img/bg/bg-image-4.jpg);
 }
 
 .bg-image-5 {
