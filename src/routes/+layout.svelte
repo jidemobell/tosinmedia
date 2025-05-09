@@ -60,13 +60,12 @@
     }, Promise.resolve());
   });
 
-
-
    
   import Header from '$lib/Header.svelte';
   // import Footer from '$lib/Footer.svelte';
   // $: console.log($page.url.pathname);
-  $: showHeader = $page.url.pathname === '/photo-gallery';
+  const headerRoutes = ['/photo-gallery', '/photo-details'];
+  $: showHeader = headerRoutes.includes($page.url.pathname) ;
   // $: console.log('showHeader:', showHeader);
 </script>
 
