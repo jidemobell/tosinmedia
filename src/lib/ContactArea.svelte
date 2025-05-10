@@ -4,7 +4,10 @@
       <div class="col-xl-6 col-lg-6">
         <div class="section-title">
           <h2>Contact Form</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page buildup</p>
+          <p>
+            Have a project in mind or want to capture your special moments? 
+            Fill out the form below, and we’ll get back to you as soon as possible.
+          </p>
         </div>
         <form action="mail.php" method="POST" id="contact-form" class="photoghor-form">
           <div class="photoghor-form-inner">
@@ -33,20 +36,34 @@
         <div class="contact-info-wrapper">
           <div class="section-title">
             <h2>Quick Contact</h2>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page buildup</p>
+            <p>
+              Let’s connect! Whether you have questions, want to book a session, or just want to say hello, 
+              here’s how you can reach us.
+            </p>
           </div>
           <div class="contact-info">
             <div class="single-info">
               <h5>PHONE NUMBER</h5>
-              <p><a href="/">+88012659845</a> / <a href="/">+88012659864</a></p>
+              <p>
+                <a href="tel:+18622185075">+1 (862) 218-5075</a> 
+                <!-- / -->
+                <!-- <a href="tel:+14435556789">+1 (862) 218-5075</a> -->
+              </p>
             </div>
             <div class="single-info">
               <h5>E-MAIL ADDRESS</h5>
-              <p><a href="/">photoghor@gmail.com</a> / <a href="/">servphotogr@gmail.com</a></p>
+              <p>
+                <a href="mailto:info@tosinpeter.com">info@tosinpeter.com</a> / 
+                <a href="mailto:bookings@tosinpeter.com">bookings@tosinpeter.com</a>
+              </p>
             </div>
             <div class="single-info">
               <h5>OUR ADDRESS</h5>
-              <p>32/3 north south road, Wilont passage Mirshora, New Wrork</p>
+              <p>
+                Tosin Peter Photography Studio, <br>
+                123 Creative Avenue, <br>
+                Baltimore, Maryland, USA.
+              </p>
             </div>
           </div>
         </div>
