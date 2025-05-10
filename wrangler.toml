@@ -1,0 +1,20 @@
+name = "tosinpeter-worker" # Name of your Worker
+main = "api/index.js"      # Entry point for your Worker
+compatibility_date = "2025-05-10" # Today's date
+
+[vars]
+# Add environment variables here if needed
+
+[build]
+command = "npm run build" # Optional: Build command for your app
+
+workers_dev = true
+# Enable development mode
+
+[account]
+id = "35be2a836c405cc11127292d19a0cee5" # Replace with your Cloudflare account ID
+
+# Production routes
+# [[routes]]
+# pattern = "https://tosinmedia.pages.dev/api/*" # Custom domain for production
+# zone_name = "tosinmedia.pages.dev" # Your domain name
