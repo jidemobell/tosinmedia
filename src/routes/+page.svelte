@@ -7,6 +7,13 @@
 	import Footer from "..//lib/Footer.svelte";
 	import Header from "..//lib/Header.svelte";
 
+	// import type { PageProps } from './$types';
+
+	// let { data, form }: PageProps = $props();
+
+  export let data;
+	const {testimonials} = data;
+	// console.log('Testimonials:', testimonials);
 </script>
 <main>
 	<!--[if lte IE 9]>
@@ -34,7 +41,11 @@
 			</div>
       <About/>
 			<Gallery/>
-      <Testimonial/>
+			<div class="section" data-anchor="fourth-section">
+				
+				<Testimonial {testimonials}/>
+			</div>
+      
 			<div class="section" data-anchor="fifth-section">
 				<!-- Contact Area -->
 				<ContactArea/>
@@ -58,3 +69,5 @@
 </main>
 
 <!-- </html> -->
+
+

@@ -16,14 +16,14 @@ export const nodes = [
 export const server_loads = [];
 
 export const dictionary = {
-		"/": [2],
-		"/admin": [3],
-		"/index-dark": [4],
-		"/photo-2-column": [5],
-		"/photo-4-column": [6],
-		"/photo-details": [7],
-		"/photo-gallery": [8],
-		"/user": [9]
+		"/": [~2],
+		"/admin": [4],
+		"/index-dark": [5],
+		"/photo-2-column": [6],
+		"/photo-4-column": [7],
+		"/photo-details": [8],
+		"/photo-gallery": [9],
+		"/[username]": [3]
 	};
 
 export const hooks = {

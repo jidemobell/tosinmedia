@@ -39,6 +39,8 @@
 		"/img/bg/bg-image-7.jpg",
 		"/img/bg/newbg/124541.jpg",
 		"/img/bg/newbg/backgound_1920.png",
+		"/img/bg/newbg/fabrizio-conti-02.jpg",
+		"/img/bg/newbg/fabrizio-conti.jpg",
 		"/img/favicon.ico",
 		"/img/icon.png",
 		"/img/icons/icon-close-white.png",
@@ -101,8 +103,6 @@
 		"/js/main.js",
 		"/js/plugins.js",
 		"/js/popper.min.js",
-		"/js/popper.min.js.map",
-		"/js/vendor/jquery-3.6.0.min.js",
-		"/js/vendor/modernizr-3.11.2.min.js"
+		"/js/popper.min.js.map"
 	]
 }

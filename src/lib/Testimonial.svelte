@@ -1,43 +1,67 @@
 <script>
-  import { onMount } from 'svelte';
+  // import { onMount } from 'svelte';
 
-  let testimonials = [];
+export let testimonials = [];
 
-  onMount(async () => {
-    try {
-      const response = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/testimonials');
-      console.log('Response:', response);
-      if (response.ok) {
-        testimonials = await response.json();
-        console.log('Testimonials fetched successfully:', testimonials);
-      } else {
-        console.error('Failed to fetch testimonials');
-      }
-    } catch (error) {
-      console.error('Error fetching testimonials:', error);
-    }
-  });
+// Reinitialize slider when testimonials are updated
+// $: if (testimonials.length > 0) {
+//   console.log('Reinitializing slider');
+//   if (typeof window !== 'undefined' && window.$ && window.$('.testimonial-slider').slick) {
+//     window.$('.testimonial-slider').slick('unslick'); // Destroy existing slider
+//     window.$('.testimonial-slider').slick(); // Reinitialize slider
+//   }
+// }
+
+// onMount(() => {
+//   if (typeof window !== 'undefined') {
+//     const scripts = [
+//       { src: "/js/vendor/jquery-3.6.0.min.js", defer: false },
+//       { src: "/js/slick.min.js", defer: true }, // Example: Slick slider script
+//     ];
+
+//     const loadScript = (script) => {
+//       return new Promise((resolve, reject) => {
+//         const el = document.createElement("script");
+//         el.src = script.src;
+//         el.defer = script.defer || false;
+//         el.onload = resolve;
+//         el.onerror = reject;
+//         document.body.appendChild(el);
+//       });
+//     };
+
+//     scripts.reduce((promise, script) => {
+//       return promise.then(() => loadScript(script));
+//     }, Promise.resolve()).then(() => {
+//       console.log('All scripts loaded');
+//       if (window.$ && window.$('.testimonial-slider').slick) {
+//         window.$('.testimonial-slider').slick(); // Initialize slider
+//       }
+//     });
+//   }
+// });
 </script>
 
 
-<div class="section" data-anchor="fourth-section">
-  <section id="testimonial-area" class="cr-section testimonial-area section-padding-xlg bg-image-5" data-white-overlay="9.5">
+<!-- <div class="section" data-anchor="fourth-section"> -->
+ <!-- bg-image-5 -->
+  <section id="testimonial-area" class="cr-section testimonial-area section-padding-xlg" data-white-overlay="9.5">
     <div class="container">
       <div class="row">
         <div class="col-xl-5 col-lg-6 col-md-8 col-12">
           <div class="section-title">
-            <h2>Testimonial <br> What We Found</h2>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page buildup</p>
+            <h2>What Our Clients Say</h2>
+            <p>Hear from our satisfied clients about their experiences working with us.</p>
           </div>
         </div>
       </div>
       <div class="row testimonial-slider">
-
+      <!-- {#if testimonials.length > 0} -->
         {#each testimonials as testimonial}
         <div class="col-12">
           <div class="testimonial text-center">
             <span class="testimonial-image">
-              <img src={testimonial.image || '/img/author-image/placeholder.png'} alt={testimonial.name} />
+              <img src={testimonial.image || '/img/author-image/author-image-3.png'} alt={testimonial.name} />
             </span>
             <p>{testimonial.message}</p>
             <h5>{testimonial.name}</h5>
@@ -49,6 +73,9 @@
           </div>
         </div>
         {/each}
+        <!-- {:else}
+    <p>Loading testimonials...</p>
+  {/if} -->
 
         <!-- Single Testimonial -->
         <!-- <div class="col-12">
@@ -100,4 +127,57 @@
       </div>
     </div>
   </section>
-</div>
+<!-- </div> -->
+
+
+
+<style>
+  #testimonial-area {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #testimonial-area::before {
+  content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/bg/newbg/fabrizio-conti.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* Adjust transparency */
+    z-index: 1;
+}
+
+
+#testimonial-area > * {
+    position: relative;
+    z-index: 2; 
+  }
+
+.testimonial-slider {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add spacing between cards */
+}
+
+.testimonial {
+  flex: 1 1 calc(33.333% - 20px); /* Adjust width for 3 cards per row */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.062);
+  min-height: 320px; /* Set a minimum height */
+  margin: 3px;
+}
+
+</style>

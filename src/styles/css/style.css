@@ -1198,7 +1198,10 @@ blockquote {
 }
 
 .bg-image-5 {
-  background-image: url(../img/bg/bg-image-5.jpg);
+  background-image: url(/img/bg/newbg/fabrizio-conti.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .bg-image-6 {
