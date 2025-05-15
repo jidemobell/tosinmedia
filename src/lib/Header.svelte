@@ -1,3 +1,11 @@
+<script>
+  import { Button } from "carbon-components-svelte";
+  import Calendar from "carbon-icons-svelte/lib/Calendar.svelte"; // Import the booking icon
+
+  // import TextBold from "carbon-icons-svelte/lib/TextBold.svelte";
+</script>
+  
+  
   <header class="header sticky-header fixed-header">
     <div class="container">
       <div class="header-inner d-none d-lg-flex">
@@ -22,6 +30,23 @@
             </ul>
           </nav>
         </div>
+        <div class="header-cta">
+          <!-- <a href="https://calendly.com/your-calendly-link" target="_blank" class="btn btn-primary">
+            Book Appointment
+          </a> -->
+          <Button 
+          kind="secondary"
+          href="https://calendly.com/your-calendly-link"
+          target="_blank"
+          icon={Calendar}
+          iconDescription="Book Appointment"
+          style="background-color: black; color: white; font-weight: bold; padding: 10px 33px; border-radius: 2px;"
+          >
+          <span class="button-text">Book Appointment</span>
+
+  
+        </Button>
+        </div>
       </div>
       <div class="mobile-menu-wrapper d-block d-lg-none">
         <div class="mobile-menu clearfix">
@@ -32,3 +57,25 @@
       </div>
     </div>
   </header>
+
+
+  <style>
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-navigation {
+    margin-left: auto;
+  }
+
+  .header-cta {
+    margin-left: 20px;
+  }
+
+  .button-text {
+    margin-right: 8px; /* Add spacing between text and icon */
+  }
+
+</style>

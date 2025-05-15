@@ -1,6 +1,8 @@
 import { handleTestimonials } from './routes/testimonials.js';
 import { handleUser } from './routes/user.js';
 import { handleEvents } from './routes/events.js';
+import { handleAdmin } from './routes/admin.js';
+import { handleBookings } from './routes/bookings.js';
 
 
 
@@ -20,6 +22,12 @@ export default {
       });
     }
 
+
+    // Route: /api/testimonials
+    if (url.pathname.startsWith('/api/admin')) {
+      return handleAdmin(request);
+    }
+
     // Route: /api/testimonials
     if (url.pathname.startsWith('/api/testimonials')) {
       return handleTestimonials(request);
@@ -33,6 +41,11 @@ export default {
     // Route: /api/events/*
     if (url.pathname.startsWith('/api/events')) {
       return handleEvents(request);
+    }
+
+    // Route: /api/bookings/*
+    if (url.pathname.startsWith('/api/bookings')) {
+      return handleBookings(request);
     }
 
     // Default: 404 Not Found

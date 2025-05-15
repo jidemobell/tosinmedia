@@ -5,6 +5,7 @@
 
 
   // Any initialization logic can go here
+  import "carbon-components-svelte/css/g10.css";
   import '$styles/css/bootstrap.min.css';
   import '$styles/css/plugins.css';
   import '$styles/css/style.css';
