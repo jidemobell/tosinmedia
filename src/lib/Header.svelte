@@ -1,12 +1,21 @@
 <script>
   import { Button } from "carbon-components-svelte";
   import Calendar from "carbon-icons-svelte/lib/Calendar.svelte"; // Import the booking icon
-
+  // import { onMount } from "svelte";
   // import TextBold from "carbon-icons-svelte/lib/TextBold.svelte";
+  // let buttonStyle = "background-color: black; color: white; font-weight: bold; padding: 10px 33px; border-radius: 2px;";
+
+//  let buttonStyle = "background-color: black; color: white; font-weight: bold; padding: 10px 33px; border-radius: 2px;";
+
+  // Adjust styles for smaller screens
+  //  onMount(() => {
+  //   if (window.innerWidth <= 767) {
+  //     console.log("Mobile view detected");
+  //     buttonStyle = "background-color: black; color: white; font-weight: bold; padding: 8px 20px; border-radius: 2px; font-size: 14px;";
+  //   }
+  // });
 </script>
-  
-  
-  <header class="header sticky-header fixed-header">
+  <header class="header sticky-header fixed-header ">
     <div class="container">
       <div class="header-inner d-none d-lg-flex">
         <div class="header-logo">
@@ -42,10 +51,9 @@
           iconDescription="Book Appointment"
           style="background-color: black; color: white; font-weight: bold; padding: 10px 33px; border-radius: 2px;"
           >
-          <span class="button-text">Book Appointment</span>
-
-  
+          <span class="button-text">Book Appointment</span>  
         </Button>
+        
         </div>
       </div>
       <div class="mobile-menu-wrapper d-block d-lg-none">
@@ -77,5 +85,6 @@
   .button-text {
     margin-right: 8px; /* Add spacing between text and icon */
   }
+
 
 </style>

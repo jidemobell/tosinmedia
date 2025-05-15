@@ -128,3 +128,13 @@
     document.body.appendChild(script);
   });
 </script> -->
+
+<style>
+  /* Hide the header on mobile viewports */
+   /* Hide the header on mobile viewports */
+  @media (max-width: 767px) {
+    :global(.responsive-header) {
+      display: none;
+    }
+  }
+</style>

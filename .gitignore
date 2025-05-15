@@ -33,6 +33,7 @@ _testmain.go
 
 # mac hidden files
 .DS_Store
+.svelte-kit
 
 ##other
 node_modules/

@@ -1181,6 +1181,10 @@ blockquote {
   background-position: center center;
 }
 
+.bg-image-0 {
+  background-image: url(/img/newbg/eriggal.png);
+}
+
 .bg-image-1 {
   background-image: url(/img/newbg/sallygap.png);
 }
