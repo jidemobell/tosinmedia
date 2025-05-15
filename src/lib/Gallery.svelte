@@ -11,10 +11,10 @@
             </div>
             <div class="col-xl-5 col-lg-6 col-12">
               <div class="g-photo-content textblock">
-                <h5><a href="/photo-gallery">PHOTOGRAPHY</a></h5>
-                <h2><a href="/photo-details">Dark weather in hulyan forest</a></h2>
+                <h5><a href="/photo-gallery">WEDDING PHOTOGRAPHY</a></h5>
+                <h2><a href="/photo-details">A Magical Day in the Forest</a></h2>
                 <span class="vertical-bar"></span>
-                <a href="/photo-details" class="readmore-button">Image Details</a>
+                <a href="/photo-details" class="readmore-button">View Wedding Details</a>
               </div>
             </div>
           </div>
@@ -28,10 +28,10 @@
             </div>
             <div class="col-xl-5 col-lg-6 col-12">
               <div class="g-photo-content textblock">
-                <h5><a href="/photo-gallery">PHOTOGRAPHY</a></h5>
-                <h2><a href="/photo-details">Beautiful girl sleeping on home</a></h2>
+                <h5><a href="/photo-gallery">WEDDING PHOTOGRAPHY</a></h5>
+                <h2><a href="/photo-details">A Bride's Quiet Moment</a></h2>
                 <span class="vertical-bar"></span>
-                <a href="/photo-details" class="readmore-button">Image Details</a>
+                <a href="/photo-details" class="readmore-button">View Wedding Details</a>
               </div>
             </div>
           </div>
@@ -45,10 +45,10 @@
             </div>
             <div class="col-xl-5 col-lg-6 col-12">
               <div class="g-photo-content textblock">
-                <h5><a href="/photo-gallery">PHOTOGRAPHY</a></h5>
-                <h2><a href="/photo-details">Awesome hair style with sunglass</a></h2>
+                <h5><a href="/photo-gallery">WEDDING PHOTOGRAPHY</a></h5>
+                <h2><a href="/photo-details">Elegant Wedding Portrait</a></h2>
                 <span class="vertical-bar"></span>
-                <a href="/photo-details" class="readmore-button">Image Details</a>
+                <a href="/photo-details" class="readmore-button">View Wedding Details</a>
               </div>
             </div>
           </div>
@@ -62,10 +62,10 @@
             </div>
             <div class="col-xl-5 col-lg-6 col-12">
               <div class="g-photo-content textblock">
-                <h5><a href="/photo-gallery">PHOTOGRAPHY</a></h5>
-                <h2><a href="/photo-details">Exclusive art with color & creative</a></h2>
+                <h5><a href="/photo-gallery">WEDDING PHOTOGRAPHY</a></h5>
+                <h2><a href="/photo-details">A Colorful Celebration</a></h2>
                 <span class="vertical-bar"></span>
-                <a href="/photo-details" class="readmore-button">Image Details</a>
+                <a href="/photo-details" class="readmore-button">View Wedding Details</a>
               </div>
             </div>
           </div>
@@ -79,10 +79,10 @@
             </div>
             <div class="col-xl-5 col-lg-6 col-12">
               <div class="g-photo-content textblock">
-                <h5><a href="/photo-gallery">PHOTOGRAPHY</a></h5>
-                <h2><a href="/photo-details">Girl on bed with red hat & black dress</a></h2>
+                <h5><a href="/photo-gallery">WEDDING PHOTOGRAPHY</a></h5>
+                <h2><a href="/photo-details">A Day to Remember</a></h2>
                 <span class="vertical-bar"></span>
-                <a href="/photo-details" class="readmore-button">Image Details</a>
+                <a href="/photo-details" class="readmore-button">View Wedding Details</a>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@
         <div class="row">
           <div class="col-lg-6 order-2 order-lg-1">
             <div class="g-photo-triggers">
-              <a href="/photo-gallery" class="readmore-button">Full Gallery</a>
+              <a href="/photo-gallery" class="readmore-button">View Full Wedding Gallery</a>
               <span class="vertical-bar"></span>
               <div class="g-photo-arrows"></div>
               <div class="g-photo-pagination"></div>
