@@ -1,0 +1,39 @@
+<script>
+  import UserManagement from './users/UserManagement.svelte';
+  import AppointmentManagement from './appointments/AppointmentManagement.svelte';
+  // import TestimonialManagement from './TestimonialManagement.svelte';
+  import BookingManagement from './bookings/BookingManagement.svelte';
+
+  export let activeSection = 'dashboard'; // Default section
+</script>
+
+<div class="dashboard-management">
+  {#if activeSection === 'users'}
+    <UserManagement />
+  {/if}
+
+  {#if activeSection === 'appointments'}
+    <AppointmentManagement />
+  {/if}
+
+  <!-- {#if activeSection === 'testimonials'}
+    <TestimonialManagement />
+  {/if} -->
+
+  {#if activeSection === 'bookings'}
+    <BookingManagement />
+  {/if}
+
+  {#if activeSection === 'dashboard'}
+    <h1>Welcome to the Admin Dashboard</h1>
+  {/if}
+</div>
+
+<style>
+  .dashboard-management {
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 100%;
+    overflow-y: auto; /* Scrollable if content overflows */
+  }
+</style>
