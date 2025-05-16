@@ -165,8 +165,8 @@ export let testimonials = [];
   gap: 20px; /* Add spacing between cards */
 }
 
-.testimonial {
-  flex: 1 1 calc(33.333% - 20px); /* Adjust width for 3 cards per row */
+/* .testimonial {
+  flex: 1 1 calc(33.333% - 20px); 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -176,8 +176,49 @@ export let testimonials = [];
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.062);
-  min-height: 320px; /* Set a minimum height */
+  min-height: 320px; 
   margin: 3px;
+} */
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Vertically center content */
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.062);
+  min-height: 320px;
+  margin: 3px;
+  flex: 1;
+}
+
+.testimonial-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Reduced space below image */
+  border: red solid 2px;
+}
+
+.testimonial p {
+  margin-top: 0;
+  margin-bottom: 10px; /* Reduced space below message */
+  text-align: center;
+}
+
+.testimonial h5 {
+  margin-top: 0;
+  margin-bottom: 6px; /* Reduced space below name */
+  text-align: center;
+}
+
+.testimonial h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 </style>

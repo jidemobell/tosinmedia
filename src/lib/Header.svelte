@@ -20,7 +20,7 @@
       <div class="header-inner d-none d-lg-flex">
         <div class="header-logo">
           <a href="/">
-            <img src="img/logo/bitmap.png" alt="logo" style="height: 20px;">
+            <img src="img/logo/petermarkwhite4.png" alt="logo" style="height: 20px;">
           </a>
         </div>
         <div class="header-navigation">
