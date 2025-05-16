@@ -1,24 +1,25 @@
 <script>
   // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, push } from "firebase/database";
+// import { initializeApp } from "firebase/app";
+// import { getDatabase, ref, push } from "firebase/database";
+import { database } from '$lib/firebase';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAV9cbQPddGS927a-XJkgkMdiwwZNUbV9I",
-  authDomain: "petermark-9ba50.firebaseapp.com",
-  databaseURL: "https://petermark-9ba50-default-rtdb.firebaseio.com",
-  projectId: "petermark-9ba50",
-  storageBucket: "petermark-9ba50.firebasestorage.app",
-  messagingSenderId: "892056005886",
-  appId: "1:892056005886:web:f9d7858357d71cf9ea89af"
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAV9cbQPddGS927a-XJkgkMdiwwZNUbV9I",
+//   authDomain: "petermark-9ba50.firebaseapp.com",
+//   databaseURL: "https://petermark-9ba50-default-rtdb.firebaseio.com",
+//   projectId: "petermark-9ba50",
+//   storageBucket: "petermark-9ba50.firebasestorage.app",
+//   messagingSenderId: "892056005886",
+//   appId: "1:892056005886:web:f9d7858357d71cf9ea89af"
+// };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+// const app = initializeApp(firebaseConfig);
+// const database = getDatabase(app);
 
  // Form data
   let formData = {

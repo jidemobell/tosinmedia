@@ -6,6 +6,7 @@
     { name: 'Appointments', icon: '📅', id: 'appointments' },
     // { name: 'Testimonials', icon: '💬', id: 'testimonials' },
     { name: 'Bookings', icon: '📖', id: 'bookings' },
+    { name: 'Contact Messages', icon: '📖', id: 'messages' }
   ];
 
   import { createEventDispatcher } from 'svelte';

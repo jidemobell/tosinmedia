@@ -3,6 +3,7 @@
   import AppointmentManagement from './appointments/AppointmentManagement.svelte';
   // import TestimonialManagement from './TestimonialManagement.svelte';
   import BookingManagement from './bookings/BookingManagement.svelte';
+  import ContactMessages from './ContactMessages.svelte';
 
   export let activeSection = 'dashboard'; // Default section
 </script>
@@ -22,6 +23,10 @@
 
   {#if activeSection === 'bookings'}
     <BookingManagement />
+  {/if}
+
+  {#if activeSection === 'messages'}
+    <ContactMessages />
   {/if}
 
   {#if activeSection === 'dashboard'}
