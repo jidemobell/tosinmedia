@@ -2,15 +2,15 @@
   import { onMount } from 'svelte';
   import Sider from '../../lib/Admin/Sider.svelte';
 
-  import { DataTable } from "carbon-components-svelte";
-  import UserManagement from '../../lib/Admin/users/UserManagement.svelte';
+  // import { DataTable } from "carbon-components-svelte";
+  // import UserManagement from '../../lib/Admin/users/UserManagement.svelte';
   import DashboardManagement from '../../lib/Admin/DashboardManagement.svelte';
 
   let users = [];
   let appointments = [];
   let testimonials = [];
-  let selectedUser = null;
-  let selectedAppointment = null;
+  // let selectedUser = null;
+  // let selectedAppointment = null;
 
   async function fetchData() {
     const userResponse = await fetch('/api/admin/view-users');
@@ -50,7 +50,7 @@
   function handleSectionChange(event) {
     const { section } = event.detail;
     console.log('Selected Section:', section);
-    activeSection = section.id;
+    activeSection = section;
     // activeSider = section.id;
     console.log('Active Section:', activeSection);
   }
@@ -75,7 +75,7 @@
     <!-- {#if activeSection === 'users'}
       <UserManagement />
     {/if} -->
-     <DashboardManagement activeSection={activeSection}/>
+     <DashboardManagement bind:activeSection/>
 
     <!-- {#if activeSection === 'appointments'}
       <h1>Manage Appointments</h1>

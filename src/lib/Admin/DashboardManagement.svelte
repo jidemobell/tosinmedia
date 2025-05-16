@@ -4,13 +4,24 @@
   // import TestimonialManagement from './TestimonialManagement.svelte';
   import BookingManagement from './bookings/BookingManagement.svelte';
   import ContactMessages from './ContactMessages.svelte';
+  import CreateUser from './users/CreateUser.svelte';
 
   export let activeSection = 'dashboard'; // Default section
+
+  function handleSectionChange(event) {
+    activeSection = event.detail.section;
+  }
+
+  // $: console.log('Active Section at dashboard manager:', activeSection);
 </script>
 
 <div class="dashboard-management">
   {#if activeSection === 'users'}
-    <UserManagement />
+    <UserManagement on:sectionChange={handleSectionChange} />
+  {/if}
+
+  {#if activeSection === 'create-user'}
+    <CreateUser />
   {/if}
 
   {#if activeSection === 'appointments'}

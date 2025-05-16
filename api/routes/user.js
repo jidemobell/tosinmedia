@@ -4,6 +4,36 @@
 // POST /api/user/submit-testimonial
 // PUT /api/user/close-profile
 
+// {
+//   "users": {
+//     "userId1": {
+//       "username": "janedoe",
+//       "name": "Jane Doe",
+//       "role": "user",
+//       "password": "hashedpassword",
+//       "createdAt": 1234567890
+//     }
+//   }
+// }
+
+import bcrypt from 'bcryptjs'; // Use bcryptjs for hashing
+import { initializeApp, getApps } from "firebase/app";
+import { getDatabase, ref, set } from "firebase/database";
+
+// Firebase config (reuse your shared config if possible)
+const firebaseConfig = {
+  apiKey: "AIzaSyAV9cbQPddGS927a-XJkgkMdiwwZNUbV9I",
+  authDomain: "petermark-9ba50.firebaseapp.com",
+  databaseURL: "https://petermark-9ba50-default-rtdb.firebaseio.com",
+  projectId: "petermark-9ba50",
+  storageBucket: "petermark-9ba50.firebasestorage.app",
+  messagingSenderId: "892056005886",
+  appId: "1:892056005886:web:f9d7858357d71cf9ea89af"
+};
+
+// Prevent re-initialization
+const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 // Handler for /api/user
 async function handleUser(request) {
@@ -68,6 +98,45 @@ async function handleUser(request) {
         'Access-Control-Allow-Origin': '*',
       },
     });
+  }
+
+
+  // Route: POST /api/user/create
+  if (url.pathname === '/api/user/create' && request.method === 'POST') {
+    try {
+      const body = await request.json();
+      const { name, username, password, role } = body;
+
+      if (!name || !username || !password) {
+        return new Response(JSON.stringify({ error: 'Missing required fields' }), {
+          status: 400,
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+        });
+      }
+
+      // Hash the password
+      const hashedPassword = await bcrypt.hash(password, 10);
+      const userId = crypto.randomUUID();
+
+      // Save user to Firebase
+      await set(ref(database, 'users/' + userId), {
+        name,
+        username,
+        password: hashedPassword,
+        role: role || 'user',
+        createdAt: Date.now()
+      });
+
+      return new Response(JSON.stringify({ message: 'User created successfully', userId }), {
+        status: 201,
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+      });
+    } catch (error) {
+      return new Response(JSON.stringify({ error: 'Failed to create user', details: error.message }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+      });
+    }
   }
 
   // Handle unsupported methods

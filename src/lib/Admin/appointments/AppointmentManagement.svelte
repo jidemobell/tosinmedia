@@ -6,7 +6,7 @@
   // Fetch appointments from the API on mount
   onMount(async () => {
     try {
-      const response = await fetch('/api/admin/view-appointments'); // Replace with your API endpoint
+      const response = await fetch('/api/admin/view-appointments'); 
       if (!response.ok) {
         throw new Error('Failed to fetch appointments');
       }

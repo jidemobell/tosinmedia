@@ -4,7 +4,6 @@
     { name: 'Dashboard', icon: '🏠', id: 'dashboard' },
     { name: 'Users', icon: '👤', id: 'users' },
     { name: 'Appointments', icon: '📅', id: 'appointments' },
-    // { name: 'Testimonials', icon: '💬', id: 'testimonials' },
     { name: 'Bookings', icon: '📖', id: 'bookings' },
     { name: 'Contact Messages', icon: '📖', id: 'messages' }
   ];
@@ -13,10 +12,15 @@
   const dispatch = createEventDispatcher();
 
   const selectSection = (sectionId) => {
+  if (sectionId === 'create-users') {
+    dispatch('sectionChange', { section: 'users' });
+    return;
+  }
   activeSection = sectionId;
   const selectedSection = sections.find((section) => section.id === sectionId);
-  dispatch('sectionChange', { section: selectedSection });
+  dispatch('sectionChange', { section: sectionId });
 };
+
 </script>
 
 <div class="sider">

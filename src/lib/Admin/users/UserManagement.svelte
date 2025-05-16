@@ -1,24 +1,35 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, createEventDispatcher } from 'svelte';
+  // import CreateUser from './CreateUser.svelte';
+
+  const dispatch = createEventDispatcher();
+
 
   let users = []; // Users fetched from the API
   let activeFilter = 'all'; // Filter: all, active, disabled
   let currentPage = 1; // Current page number
   const rowsPerPage = 20; // Number of users per page
+  let showCreateUser = false;
 
-  // Fetch users from the API on mount
-  onMount(async () => {
+  async function refreshUsers() {
     try {
       const response = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/admin/view-users');
-      if (!response.ok) {
-        throw new Error('Failed to fetch users');
-      }
+      if (!response.ok) throw new Error('Failed to fetch users');
       users = await response.json();
-      console.log('Fetched users:', users);
     } catch (error) {
       console.error('Error fetching users:', error);
     }
-  });
+  }
+
+
+  // Fetch users from the API on mount
+  onMount(refreshUsers);
+
+  function openCreateUser() {
+    dispatch('sectionChange', { section: 'create-user' });
+  }
+
+  // $: console.log("event", event);
 
   // Filtered users based on the active filter
   $: filteredUsers = users.filter((user) => {
@@ -46,15 +57,21 @@
       currentPage = page;
     }
   }
+
+  // $: console.log("showcreate user:", showCreateUser);
 </script>
 
 <div class="user-management">
+  <div class="create-user-bar">
+    <button class="create-user-btn" on:click={openCreateUser}>+ Create User</button>
+  </div>
   <!-- Filters -->
   <div class="filters">
     <button on:click={() => setFilter('all')} class:active={activeFilter === 'all'}>All</button>
     <button on:click={() => setFilter('active')} class:active={activeFilter === 'active'}>Active</button>
     <button on:click={() => setFilter('disabled')} class:active={activeFilter === 'disabled'}>Disabled</button>
   </div>
+
 
   <!-- User Table -->
   <table class="user-table">
@@ -89,6 +106,9 @@
     </button>
   </div>
 </div>
+
+<!-- <CreateUser show={showCreateUser} on:close={closeCreateUser} on:created={userCreated} /> -->
+
 
 <style>
   .user-management {

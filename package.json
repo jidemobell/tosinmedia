@@ -36,6 +36,7 @@
   "dependencies": {
     "@sveltejs/adapter-cloudflare": "^7.0.3",
     "@sveltejs/adapter-vercel": "^5.7.2",
+    "bcryptjs": "^3.0.2",
     "firebase": "^11.7.3"
   }
 }
