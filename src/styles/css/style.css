@@ -1183,7 +1183,7 @@ blockquote {
 
 .bg-image-0 {
   background-image: url(/img/newbg/eriggal.png);
-  filter: blur(5px);
+  /* filter: blur(5px); */
 }
 
 .bg-image-1 {
