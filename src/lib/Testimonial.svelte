@@ -200,7 +200,7 @@ export let testimonials = [];
   justify-content: center;
   align-items: center;
   margin-bottom: 10px; /* Reduced space below image */
-  border: red solid 2px;
+  /* border: red solid 2px; */
 }
 
 .testimonial p {
