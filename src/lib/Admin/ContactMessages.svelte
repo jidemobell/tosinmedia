@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { database } from '$lib/firebase';
-  // import { getDatabase, ref, onValue } from "firebase/database";
+  import { getDatabase, ref, onValue } from "firebase/database";
 
   // Firebase config (reuse from your project or import from a config file)
   // const firebaseConfig = {
