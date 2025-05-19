@@ -1,3 +1,5 @@
+compatibility_flags = [ "nodejs_compat" ]
+
 name = "tosinpeter-worker" # Name of your Worker
 main = "api/index.js"      # Entry point for your Worker
 compatibility_date = "2025-05-10" # Today's date
@@ -13,6 +15,8 @@ workers_dev = true
 
 [account]
 id = "35be2a836c405cc11127292d19a0cee5" # Replace with your Cloudflare account ID
+
+# compatibility_flags = [ "nodejs_compat" ]
 
 # Production routes
 # [[routes]]

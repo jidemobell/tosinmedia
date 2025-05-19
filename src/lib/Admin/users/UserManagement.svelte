@@ -13,12 +13,17 @@
 
   async function refreshUsers() {
     try {
-      const response = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/admin/view-users');
-      if (!response.ok) throw new Error('Failed to fetch users');
-      users = await response.json();
-    } catch (error) {
-      console.error('Error fetching users:', error);
-    }
+    const token = localStorage.getItem('token');
+    const response = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/admin/view-users', {
+      headers: {
+        'x-admin-token': token
+      }
+    });
+    if (!response.ok) throw new Error('Failed to fetch users');
+    users = await response.json();
+  } catch (error) {
+    console.error('Error fetching users:', error);
+  }
   }
 
 

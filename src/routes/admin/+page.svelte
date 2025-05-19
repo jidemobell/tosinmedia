@@ -1,10 +1,10 @@
 <script>
-  import { onMount } from 'svelte';
-  import Sider from '../../lib/Admin/Sider.svelte';
+  import { onMount } from "svelte";
+  import Sider from "../../lib/Admin/Sider.svelte";
 
   // import { DataTable } from "carbon-components-svelte";
   // import UserManagement from '../../lib/Admin/users/UserManagement.svelte';
-  import DashboardManagement from '../../lib/Admin/DashboardManagement.svelte';
+  import DashboardManagement from "../../lib/Admin/DashboardManagement.svelte";
 
   let users = [];
   let appointments = [];
@@ -13,46 +13,50 @@
   // let selectedAppointment = null;
 
   async function fetchData() {
-    const userResponse = await fetch('/api/admin/view-users');
+    const token = localStorage.getItem("token");
+
+    const userResponse = await fetch("/api/admin/view-users", {
+      headers: {
+        "x-admin-token": token,
+      },
+    });
     users = await userResponse.json();
 
-    const appointmentResponse = await fetch('/api/admin/view-bookings');
+    const appointmentResponse = await fetch("/api/admin/view-bookings");
     appointments = await appointmentResponse.json();
 
-    const testimonialResponse = await fetch('/api/admin/view-testimonials');
+    const testimonialResponse = await fetch("/api/admin/view-testimonials");
     testimonials = await testimonialResponse.json();
   }
 
   async function markAppointmentAsCompleted(appointmentId) {
-    const response = await fetch('/api/admin/mark-paid', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+    const response = await fetch("/api/admin/mark-paid", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ bookingId: appointmentId }),
     });
 
     if (response.ok) {
-      alert('Appointment marked as completed!');
+      alert("Appointment marked as completed!");
       fetchData(); // Refresh data
     } else {
-      alert('Failed to mark appointment as completed.');
+      alert("Failed to mark appointment as completed.");
     }
   }
 
   onMount(fetchData);
 
-
   //section change logic
 
-  let activeSection = 'dashboard';
-  let activeSider = '1'
-
+  let activeSection = "dashboard";
+  let activeSider = "1";
 
   function handleSectionChange(event) {
     const { section } = event.detail;
-    console.log('Selected Section:', section);
+    console.log("Selected Section:", section);
     activeSection = section;
     // activeSider = section.id;
-    console.log('Active Section:', activeSection);
+    console.log("Active Section:", activeSection);
   }
 </script>
 
@@ -64,27 +68,31 @@
 
   <main class="dashboard-layout">
     <!-- <section> -->
-      <Sider bind:activeSection on:sectionChange={handleSectionChange} class="sider" />
+    <Sider
+      bind:activeSection
+      on:sectionChange={handleSectionChange}
+      class="sider"
+    />
     <!-- </section> -->
 
     <div class="dashboard-content">
-    <!-- {#if activeSection === 'dashboard'}
+      <!-- {#if activeSection === 'dashboard'}
       <h1>Welcome to the Admin Dashboard</h1>
     {/if} -->
 
-    <!-- {#if activeSection === 'users'}
+      <!-- {#if activeSection === 'users'}
       <UserManagement />
     {/if} -->
-     <DashboardManagement bind:activeSection/>
+      <DashboardManagement bind:activeSection />
 
-    <!-- {#if activeSection === 'appointments'}
+      <!-- {#if activeSection === 'appointments'}
       <h1>Manage Appointments</h1>
     {/if}
 
     {#if activeSection === 'testimonials'}
       <h1>Manage Testimonials</h1>
     {/if} -->
-  </div>
+    </div>
   </main>
 </div>
 

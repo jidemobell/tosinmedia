@@ -17,7 +17,8 @@ export default {
         headers: {
           "Access-Control-Allow-Origin": "*", // Allow all origins (replace '*' with your frontend domain in production)
           "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS", // Allowed methods
-          "Access-Control-Allow-Headers": "Content-Type", // Allowed headers
+           "Access-Control-Allow-Headers": "x-admin-token, Content-Type",
+          // "Access-Control-Allow-Headers": "Content-Type", 
         },
       });
     }

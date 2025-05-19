@@ -6,7 +6,13 @@
   // Fetch appointments from the API on mount
   onMount(async () => {
     try {
-      const response = await fetch('/api/admin/view-appointments'); 
+      const token = localStorage.getItem('token');
+      console.log('Token:', token);
+      const response = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/appointments', {
+        headers: {
+          'x-admin-token': token
+        }
+      });
       if (!response.ok) {
         throw new Error('Failed to fetch appointments');
       }
@@ -29,18 +35,18 @@
   <table class="appointment-table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Date Created</th>
-        <th>Reason</th>
-        <th>Appointment Date</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Location</th>
       </tr>
     </thead>
     <tbody>
       {#each appointments as appointment}
         <tr>
-          <td>{appointment.name}</td>
-          <td>{formatDate(appointment.date_created)}</td>
-          <td>{appointment.reason}</td>
+          <td>{appointment.title}</td>
+          <td>{formatDate(appointment.start)}</td>
+          <td>{appointment.description}</td>
           <td>{formatDate(appointment.appointment_date_selected)}</td>
         </tr>
       {/each}
