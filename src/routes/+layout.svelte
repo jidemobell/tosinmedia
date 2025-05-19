@@ -66,8 +66,16 @@
   // import Footer from '$lib/Footer.svelte';
   // $: console.log($page.url.pathname);
   const headerRoutes = ['/photo-gallery', '/photo-details'];
-  $: showHeader = headerRoutes.includes($page.url.pathname) ;
+
+  // Helper: true if path is a single segment (e.g. /jide), but not in headerRoutes or /admin
+  $: isUserDashboard =
+    /^\/[^/]+$/.test($page.url.pathname) &&
+    !headerRoutes.includes($page.url.pathname) &&
+    $page.url.pathname !== '/admin';
+
+  // $: showHeader = headerRoutes.includes($page.url.pathname) ;
   // $: console.log('showHeader:', showHeader);
+  $: showHeader = !isUserDashboard && $page.url.pathname !== '/admin';
 </script>
 
 <svelte:head>
@@ -95,7 +103,7 @@
 
 <!-- <body> -->
 <!-- <Header /> -->
-{#if !showHeader}
+{#if showHeader}
   <Header />
 {/if}
 <slot />

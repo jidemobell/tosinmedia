@@ -5,6 +5,8 @@
   // import { DataTable } from "carbon-components-svelte";
   // import UserManagement from '../../lib/Admin/users/UserManagement.svelte';
   import DashboardManagement from "../../lib/Admin/DashboardManagement.svelte";
+  import DashboardHeader from "../../lib/Dashboard/DashboardHeader.svelte";
+  import AppButton from "../../lib/commons/AppButton.svelte";
 
   let users = [];
   let appointments = [];
@@ -15,11 +17,19 @@
   async function fetchData() {
     const token = localStorage.getItem("token");
 
+    console.log("Token at /admin:", token);
+
     const userResponse = await fetch("/api/admin/view-users", {
       headers: {
         "x-admin-token": token,
       },
     });
+    //clear local storage and redirect to login if token is invalid
+    if (userResponse.status === 401) {
+    localStorage.clear();
+    window.location.href = '/login';
+    return;
+  }
     users = await userResponse.json();
 
     const appointmentResponse = await fetch("/api/admin/view-bookings");
@@ -58,13 +68,21 @@
     // activeSider = section.id;
     console.log("Active Section:", activeSection);
   }
+
+
+  function logout() {
+    localStorage.clear();
+    window.location.href = '/login';
+  }
 </script>
 
 <div class="admin-dashboard">
   <!-- Dark Header -->
-  <header class="dark-header">
+  <!-- <header class="dark-header">
     <h1>Admin Dashboard</h1>
-  </header>
+  </header> -->
+  <DashboardHeader />
+  <!-- <AppButton on:click={logout}>Logout</AppButton> -->
 
   <main class="dashboard-layout">
     <!-- <section> -->
