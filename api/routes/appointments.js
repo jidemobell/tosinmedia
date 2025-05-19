@@ -1,4 +1,4 @@
-
+import { isValidAdminToken } from '../utils/auth.js';
 export async function handleAppointments(request) {
   const corsHeaders = {
     "Access-Control-Allow-Origin": "*",
