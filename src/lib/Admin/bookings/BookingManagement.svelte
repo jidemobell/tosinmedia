@@ -6,11 +6,18 @@
   // Fetch bookings from the API on mount
   onMount(async () => {
     try {
-      const response = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/admin/view-bookings'); // Replace with your API endpoint
+      const token = localStorage.getItem('token');
+      const response = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/bookings', {
+        headers: {
+          'x-admin-token': token
+        }
+      });
       if (!response.ok) {
         throw new Error('Failed to fetch bookings');
       }
-      bookings = await response.json();
+      const data = await response.json();
+      // Convert bookings object to array for table rendering
+      bookings = Object.entries(data).map(([id, value]) => ({ id, ...value }));
       console.log('Fetched bookings:', bookings);
     } catch (error) {
       console.error('Error fetching bookings:', error);
@@ -18,6 +25,7 @@
   });
 
   function formatDate(dateString) {
+    if (!dateString) return '';
     const date = new Date(dateString);
     return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
   }
@@ -43,33 +51,20 @@
     <tbody>
       {#each bookings as booking}
         <tr>
-          <!-- User Link -->
           <td>
             <a href={`/admin/users/${booking.booking_user}`} class="link">
               {booking.booking_user}
             </a>
           </td>
-
-          <!-- Event Link -->
           <td>
             <a href={`/admin/events/${booking.event_name}`} class="link">
               {booking.event_name}
             </a>
           </td>
-
-          <!-- Event Date -->
           <td>{formatDate(booking.event_date)}</td>
-
-          <!-- Booking Created -->
           <td>{formatDate(booking.booking_created)}</td>
-
-          <!-- Completed -->
           <td>{booking.completed ? 'Yes' : 'No'}</td>
-
-          <!-- Amount -->
           <td>${booking.amount}</td>
-
-          <!-- Payment Medium -->
           <td>
             {#if booking.payment_medium === 'stripe'}
               <a href={`/admin/receipts/stripe/${booking.id}`} class="link">
@@ -83,11 +78,7 @@
               {booking.payment_medium}
             {/if}
           </td>
-
-          <!-- Updated -->
           <td>{formatDate(booking.updated)}</td>
-
-          <!-- History Link -->
           <td>
             <a href={`/admin/bookings/history/${booking.id}`} class="link">
               View History

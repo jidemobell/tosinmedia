@@ -7,7 +7,7 @@
   onMount(async () => {
     try {
       const token = localStorage.getItem('token');
-      console.log('Token:', token);
+      // console.log('Token:', token);
       const response = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/appointments', {
         headers: {
           'x-admin-token': token
@@ -16,8 +16,9 @@
       if (!response.ok) {
         throw new Error('Failed to fetch appointments');
       }
-      appointments = await response.json();
-      console.log('Fetched appointments:', appointments);
+      const data = await response.json();
+      // console.log('Fetched appointments:', appointments);
+      appointments = Object.entries(data).map(([id, value]) => ({ id, ...value }));
     } catch (error) {
       console.error('Error fetching appointments:', error);
     }
@@ -32,13 +33,17 @@
 <div class="appointment-management">
   <h1>Appointment Management</h1>
 
+   <!-- {#each appointments as appointment}
+        <h4>{appointment}</h4>
+      {/each} -->
+
   <table class="appointment-table">
     <thead>
       <tr>
         <th>Title</th>
         <th>Date</th>
         <th>Description</th>
-        <th>Location</th>
+        <th>End</th>
       </tr>
     </thead>
     <tbody>
@@ -47,7 +52,7 @@
           <td>{appointment.title}</td>
           <td>{formatDate(appointment.start)}</td>
           <td>{appointment.description}</td>
-          <td>{formatDate(appointment.appointment_date_selected)}</td>
+          <td>{formatDate(appointment.end)}</td>
         </tr>
       {/each}
     </tbody>

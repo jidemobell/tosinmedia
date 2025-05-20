@@ -4,7 +4,7 @@
     { name: 'Dashboard', icon: '🏠', id: 'dashboard' },
     { name: 'Users', icon: '👤', id: 'users' },
     { name: 'Appointments', icon: '📅', id: 'appointments' },
-    { name: 'Bookings', icon: '📖', id: 'bookings' },
+    // { name: 'Bookings', icon: '📖', id: 'bookings' },
     { name: 'Contact Messages', icon: '📖', id: 'messages' }
   ];
 

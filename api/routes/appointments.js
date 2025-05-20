@@ -5,7 +5,7 @@ export async function handleAppointments(request) {
     "Access-Control-Allow-Headers": "x-admin-token, Content-Type",
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
   };
-
+  
   try {
     const url = new URL(request.url);
     const adminToken = request.headers.get('x-admin-token');

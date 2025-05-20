@@ -18,73 +18,97 @@
 // }
 
 
+
 import { isValidAdminToken } from "../utils/auth.js";
+import { getDatabase, ref, get, set } from "firebase/database";
+
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
 
 async function handleAdmin(request) {
-  const url = new URL(request.url);
+  const corsHeaders = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "x-admin-token, Content-Type",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
+  };
 
-  // Authenticate admin for all admin routes
-  const adminToken = request.headers.get('x-admin-token');
-  if (!adminToken || !isValidAdminToken(adminToken)) {
-    return new Response(JSON.stringify({ error: 'Unauthorized' }), { status: 401 });
-  }
+  try {
+    const url = new URL(request.url);
 
-  // Route: POST /api/admin/create-user
-  if (url.pathname === '/api/admin/create-user' && request.method === 'POST') {
-    const body = await request.json();
-    const { name, username, email, password } = body;
+    // Authenticate admin for all admin routes
+    const adminToken = request.headers.get('x-admin-token');
+    if (!adminToken || !isValidAdminToken(adminToken)) {
+      return new Response(JSON.stringify({ error: 'Unauthorized' }), { status: 401, headers: corsHeaders });
+    }
 
-    // Hash password and create user in Firebase
-    // ... (reuse your user creation logic here, always assign role: 'user')
-    // Example:
-    // await set(ref(database, 'users/' + userId), { name, username, email, password: hashedPassword, role: 'user', createdAt: Date.now() });
+    // Route: POST /api/admin/create-user
+    if (url.pathname === '/api/admin/create-user' && request.method === 'POST') {
+      const body = await request.json();
+      const { name, username, email, password } = body;
+      const hash = await hashPassword(password);
+      const userId = Date.now().toString();
+      const database = getDatabase();
+      await set(ref(database, 'users/' + userId), { name, username, email, password: hash, role: 'user', createdAt: Date.now() });
+      return new Response(JSON.stringify({ message: 'User created successfully' }), {
+        status: 201,
+        headers: corsHeaders
+      });
+    }
 
-    return new Response(JSON.stringify({ message: 'User created successfully' }), {
-      status: 201,
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+    // Route: GET /api/admin/view-users
+    if (url.pathname === '/api/admin/view-users' && request.method === 'GET') {
+      const database = getDatabase();
+      const usersRef = ref(database, 'users');
+      const snapshot = await get(usersRef);
+      const users = snapshot.exists() ? snapshot.val() : {};
+      return new Response(JSON.stringify(users), {
+        status: 200,
+        headers: corsHeaders,
+      });
+    }
+
+    // Route: GET /api/admin/view-bookings
+    if (url.pathname === '/api/admin/view-bookings' && request.method === 'GET') {
+      const res = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/bookings');
+      const bookings = await res.json();
+      return new Response(JSON.stringify(bookings), {
+        status: 200,
+        headers: corsHeaders,
+      });
+    }
+
+    // Route: GET /api/admin/view-testimonials
+    if (url.pathname === '/api/admin/view-testimonials' && request.method === 'GET') {
+      const res = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/testimonials');
+      const testimonials = await res.json();
+      return new Response(JSON.stringify(testimonials), {
+        status: 200,
+        headers: corsHeaders,
+      });
+    }
+
+    // ...other admin routes...
+
+    // Default: 404 Not Found
+    return new Response(JSON.stringify({ error: 'Not Found' }), {
+      status: 404,
+      headers: corsHeaders,
+    });
+
+  } catch (err) {
+    return new Response(JSON.stringify({ error: err.message || 'Internal Server Error' }), {
+      status: 500,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "x-admin-token, Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
+      }
     });
   }
-
-  // Route: GET /api/admin/view-users
-  if (url.pathname === '/api/admin/view-users' && request.method === 'GET') {
-    // Fetch users from your users endpoint
-    const res = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/users');
-    const users = await res.json();
-    return new Response(JSON.stringify(users), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-    });
-  }
-
-  // Route: GET /api/admin/view-bookings
-  if (url.pathname === '/api/admin/view-bookings' && request.method === 'GET') {
-    // Fetch bookings from your bookings endpoint
-    const res = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/bookings');
-    const bookings = await res.json();
-    return new Response(JSON.stringify(bookings), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-    });
-  }
-
-  // Route: GET /api/admin/view-testimonials
-  if (url.pathname === '/api/admin/view-testimonials' && request.method === 'GET') {
-    // Fetch testimonials from your testimonials endpoint
-    const res = await fetch('https://tosinpeter-worker.testmobell.workers.dev/api/testimonials');
-    const testimonials = await res.json();
-    return new Response(JSON.stringify(testimonials), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-    });
-  }
-
-  // ...other admin routes...
-
-  // Default: 404 Not Found
-  return new Response(JSON.stringify({ error: 'Not Found' }), {
-    status: 404,
-    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-  });
 }
 
 export { handleAdmin };

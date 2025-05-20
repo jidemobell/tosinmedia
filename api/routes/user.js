@@ -28,6 +28,12 @@ import {
   generateToken,
 } from "../utils/auth.js"; // Adjust the import path as needed
 
+const corsHeaders = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "x-admin-token, Content-Type",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
+  };
+
 // Firebase config (reuse your shared config if possible)
 const firebaseConfig = {
   apiKey: "AIzaSyAV9cbQPddGS927a-XJkgkMdiwwZNUbV9I",
@@ -67,6 +73,7 @@ async function handleUser(request) {
     if (!userEntry) {
       return new Response(JSON.stringify({ error: "Invalid credentials" }), {
         status: 401,
+        headers: corsHeaders
       });
     }
 
@@ -76,7 +83,7 @@ async function handleUser(request) {
     const valid = await bcrypt.compare(password, user.password);
     if (!valid) {
       return new Response(JSON.stringify({ error: "Invalid credentials" }), {
-        status: 401,
+        status: 401, headers: corsHeaders
       });
     }
 
@@ -101,10 +108,7 @@ async function handleUser(request) {
       }),
       {
         status: 200,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
+        headers: corsHeaders,
       }
     );
   }
@@ -116,7 +120,7 @@ async function handleUser(request) {
 
     if (!userId) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
+        status: 401, headers: corsHeaders
       });
     }
 
@@ -128,7 +132,7 @@ async function handleUser(request) {
 
     if (!user) {
       return new Response(JSON.stringify({ error: "User not found" }), {
-        status: 404,
+        status: 404, headers: corsHeaders
       });
     }
 
@@ -148,10 +152,7 @@ async function handleUser(request) {
       }),
       {
         status: 200,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
+        headers: corsHeaders
       }
     );
   }
@@ -166,7 +167,7 @@ async function handleUser(request) {
 
     if (!userId) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
+        status: 401, headers: corsHeaders
       });
     }
 
@@ -180,10 +181,7 @@ async function handleUser(request) {
       JSON.stringify({ message: "Testimonial submitted successfully", event }),
       {
         status: 201,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
+        headers: corsHeaders
       }
     );
   }
@@ -267,7 +265,7 @@ async function handleUser(request) {
 
     if (!userId) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
+        status: 401, headers: corsHeaders
       });
     }
 
@@ -285,7 +283,7 @@ async function handleUser(request) {
     if (!valid) {
       return new Response(
         JSON.stringify({ error: "Invalid current password" }),
-        { status: 401 }
+        { status: 401, headers: corsHeaders }
       );
     }
 
@@ -295,17 +293,14 @@ async function handleUser(request) {
 
     return new Response(
       JSON.stringify({ message: "Password changed successfully" }),
-      { status: 200 }
+      { status: 200, headers: corsHeaders }
     );
   }
 
   // Handle unsupported methods
   return new Response(JSON.stringify({ error: "Method not allowed" }), {
     status: 405,
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    },
+    headers: corsHeaders
   });
 }
 
