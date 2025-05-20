@@ -2,22 +2,16 @@
   import { onMount } from "svelte";
   import Sider from "../../lib/Admin/Sider.svelte";
 
-  // import { DataTable } from "carbon-components-svelte";
-  // import UserManagement from '../../lib/Admin/users/UserManagement.svelte';
   import DashboardManagement from "../../lib/Admin/DashboardManagement.svelte";
   import DashboardHeader from "../../lib/Dashboard/DashboardHeader.svelte";
-  import AppButton from "../../lib/commons/AppButton.svelte";
 
   let users = [];
   let appointments = [];
   let testimonials = [];
-  // let selectedUser = null;
-  // let selectedAppointment = null;
+
 
   async function fetchData() {
     const token = localStorage.getItem("token");
-
-    console.log("Token at /admin:", token);
 
     const userResponse = await fetch("/api/admin/view-users", {
       headers: {
@@ -39,34 +33,17 @@
     testimonials = await testimonialResponse.json();
   }
 
-  async function markAppointmentAsCompleted(appointmentId) {
-    const response = await fetch("/api/admin/mark-paid", {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ bookingId: appointmentId }),
-    });
-
-    if (response.ok) {
-      alert("Appointment marked as completed!");
-      fetchData(); // Refresh data
-    } else {
-      alert("Failed to mark appointment as completed.");
-    }
-  }
 
   onMount(fetchData);
 
   //section change logic
 
   let activeSection = "dashboard";
-  let activeSider = "1";
+  // let activeSider = "1";
 
   function handleSectionChange(event) {
     const { section } = event.detail;
-    console.log("Selected Section:", section);
     activeSection = section;
-    // activeSider = section.id;
-    console.log("Active Section:", activeSection);
   }
 
 
@@ -78,12 +55,7 @@
 
 <div class="admin-dashboard">
   <!-- Dark Header -->
-  <!-- <header class="dark-header">
-    <h1>Admin Dashboard</h1>
-  </header> -->
   <DashboardHeader />
-  <!-- <AppButton on:click={logout}>Logout</AppButton> -->
-
   <main class="dashboard-layout">
     <!-- <section> -->
     <Sider
@@ -91,25 +63,8 @@
       on:sectionChange={handleSectionChange}
       class="sider"
     />
-    <!-- </section> -->
-
     <div class="dashboard-content">
-      <!-- {#if activeSection === 'dashboard'}
-      <h1>Welcome to the Admin Dashboard</h1>
-    {/if} -->
-
-      <!-- {#if activeSection === 'users'}
-      <UserManagement />
-    {/if} -->
       <DashboardManagement bind:activeSection />
-
-      <!-- {#if activeSection === 'appointments'}
-      <h1>Manage Appointments</h1>
-    {/if}
-
-    {#if activeSection === 'testimonials'}
-      <h1>Manage Testimonials</h1>
-    {/if} -->
     </div>
   </main>
 </div>

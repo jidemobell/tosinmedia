@@ -4,7 +4,7 @@
   export let title = "Dashboard";
 
   function logout() {
-    console.log("Logging out...");
+    // console.log("Logging out...");
     localStorage.clear();
     window.location.href = '/login';
   }
@@ -12,7 +12,6 @@
 
 <header class="dark-header">
   <h1>{title}</h1>
-  <!-- <button class="logout-btn" on:click={logout}>Logout</button> -->
    <AppButton on:click={logout}>Logout</AppButton> 
 </header>
 
