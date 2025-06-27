@@ -59,7 +59,7 @@
       <div class="mobile-menu-wrapper d-block d-lg-none">
         <div class="mobile-menu clearfix">
           <a href="/" class="mobile-logo">
-            <img src="img/logo/logo-light.png" alt="mobile logo">
+            <img src="img/logo/petermarkwhite4.png" alt="mobile logo">
           </a>
         </div>
       </div>
