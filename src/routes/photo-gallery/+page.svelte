@@ -1,16 +1,14 @@
-
 <main>
-	<!--[if lte IE 9]>
+  <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-	<!-- Add your site or application content here -->
+  <!-- Add your site or application content here -->
 
-	<!-- Wrapper -->
-	<div id="wrapper" class="wrapper">
-
-		<!-- Header -->
-		<!-- <header class="header sticky-header bg-dark">
+  <!-- Wrapper -->
+  <div id="wrapper" class="wrapper">
+    <!-- Header -->
+    <!-- <header class="header sticky-header bg-dark">
 			<div class="container">
 				<div class="header-inner d-none d-lg-flex">
 					<div class="header-logo">
@@ -49,237 +47,351 @@
 				</div>
 			</div>
 		</header> -->
-		<!--// Header -->
+    <!--// Header -->
 
-		<!-- Breadcrumb Area -->
-		<div class="breadcrumb-area bg-image-4" data-black-overlay="6">
-			<div class="container">
-				<div class="cr-breadcrumb">
-					<h3>PHOTO GALLERY</h3>
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li>Photo Gallery</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!--// Breadcrumb Area -->
+    <!-- Breadcrumb Area -->
+    <div class="breadcrumb-area bg-image-4" data-black-overlay="6">
+      <div class="container">
+        <div class="cr-breadcrumb">
+          <h3>PHOTO GALLERY</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li>Photo Gallery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--// Breadcrumb Area -->
 
-		<!-- Page Conttent -->
-		<main class="page-content">
+    <!-- Page Conttent -->
+    <main class="page-content">
+      <!-- Portfolios Ara -->
+      <div class="cr-section portfolios-area section-padding-lg bg-white">
+        <div class="container">
+          <div class="portfolio-filters text-center">
+            <button data-filter="*" class="is-checked">ALL</button>
+            <button data-filter=".portfolio-filter-graphic">GRAPHIC</button>
+            <button data-filter=".portfolio-filter-photoshop">PHOTOSHOP</button>
+            <button data-filter=".portfolio-filter-design">DESIGN</button>
+          </div>
 
-            <!-- Portfolios Ara -->
-			<div class="cr-section portfolios-area section-padding-lg bg-white">
-				<div class="container">
+          <div class="row portfolios-wrapper portfolios-zoom-button-holder">
+            <!-- Single Portfolio -->
+            <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-1.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-1.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div>
+            <!--// Single Portfolio -->
 
-					<div class="portfolio-filters text-center">
-						<button data-filter="*" class="is-checked">ALL</button>
-						<button data-filter=".portfolio-filter-graphic">GRAPHIC</button>
-						<button data-filter=".portfolio-filter-photoshop">PHOTOSHOP</button>
-						<button data-filter=".portfolio-filter-design">DESIGN</button>
-					</div>
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-2.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-2.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
 
-					<div class="row portfolios-wrapper portfolios-zoom-button-holder">
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-1.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-1.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-						<!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-2.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-2.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-						<!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-3.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-3.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
-									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-						<!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-4.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-4.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-						<!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-5.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-5.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-						<!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-6.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-6.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-						<!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-7.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-7.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-						<!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-design">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-8.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-8.jpg" class="portfolio-zoom-button"  aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-						<!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-9.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-9.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-                        <!--// Single Portfolio -->
-		
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-10.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-10.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-                        <!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-11.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-11.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-                        <!--// Single Portfolio -->
-						
-						<!-- Single Portfolio -->
-						<div class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
-							<div class="portfolio">
-								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-12.jpg" alt="portfolio">
-								</div>
-								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-12.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
-									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
-									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
-								</div>
-							</div>
-						</div>
-                        <!--// Single Portfolio -->
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-3.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-3.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
+                  <h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
 
-                    </div>
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-4.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-4.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
 
-                    <div class="row">
-                        <div class="col-12 text-center mt-5">
-                            <a href="/photo-gallery" class="button" data-content="View More">
-                                <span>View More</span>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-5.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-5.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
 
-				</div>
-			</div>
-			<!--// Portfolios Ara -->
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-6.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-6.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
 
-		</main>
-		<!--// Page Conttent -->
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-7.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-7.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
 
-        <!-- Footer Area -->
-        <!-- <footer id="footer-area" class="footer-area section-padding-xs bg-dark">
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-design"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-8.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-8.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
+
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-9.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-9.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
+
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-10.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-10.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
+
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-11.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-11.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
+
+            <!-- Single Portfolio -->
+            <!-- <div
+              class="col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design"
+            >
+              <div class="portfolio">
+                <div class="portfolio-image">
+                  <img
+                    src="img/portfolio/portfolio-image-12.jpg"
+                    alt="portfolio"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <a
+                    href="img/portfolio/lz-size/portfolio-image-lg-12.jpg"
+                    class="portfolio-zoom-button"
+                    aria-label="Open navigation menu"
+                    ><i class="fa fa-search-plus"></i></a
+                  >
+                  <h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
+                  <h6><a href="/photo-gallery">PORTFOLIO</a></h6>
+                </div>
+              </div>
+            </div> -->
+            <!--// Single Portfolio -->
+          </div>
+
+          <div class="row">
+            <div class="col-12 text-center mt-5">
+              <a href="/photo-gallery" class="button" data-content="View More">
+                <span>View More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// Portfolios Ara -->
+    </main>
+    <!--// Page Conttent -->
+
+    <!-- Footer Area -->
+    <!-- <footer id="footer-area" class="footer-area section-padding-xs bg-dark">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -299,13 +411,12 @@
                 </div>
             </div>
         </footer> -->
-        <!--// Footer Area -->
+    <!--// Footer Area -->
+  </div>
+  <!--// Wrapper -->
 
-	</div>
-	<!--// Wrapper -->
-
-	<!-- Js Files -->
-	<!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <!-- Js Files -->
+  <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 	<script src="js/vendor/jquery-3.6.0.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

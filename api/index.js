@@ -3,8 +3,8 @@ import { handleUser } from "./routes/user.js";
 import { handleEvents } from "./routes/events.js";
 import { handleAdmin } from "./routes/admin.js";
 import { handleBookings } from "./routes/bookings.js";
-import { handleAppointments } from './routes/appointments.js';
-
+import { handleAppointments } from "./routes/appointments.js";
+import { handleGallery } from "./routes/gallery.js";
 
 export default {
   async fetch(request) {
@@ -17,8 +17,8 @@ export default {
         headers: {
           "Access-Control-Allow-Origin": "*", // Allow all origins (replace '*' with your frontend domain in production)
           "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS", // Allowed methods
-           "Access-Control-Allow-Headers": "x-admin-token, Content-Type",
-          // "Access-Control-Allow-Headers": "Content-Type", 
+          "Access-Control-Allow-Headers": "x-admin-token, Content-Type",
+          // "Access-Control-Allow-Headers": "Content-Type",
         },
       });
     }
@@ -48,9 +48,14 @@ export default {
       return handleBookings(request);
     }
 
-    // Inside handleAdmin(request):
+    // Route: /api/appointments/*
     if (url.pathname.startsWith("/api/appointments")) {
       return handleAppointments(request);
+    }
+
+    // Route: /api/gallery/*
+    if (url.pathname.startsWith("/api/gallery")) {
+      return handleGallery(request);
     }
 
     // Default: 404 Not Found

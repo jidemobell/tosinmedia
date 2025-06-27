@@ -20,7 +20,7 @@
         </div>
         <div class="col-lg-6 col-12 order-1 order-lg-2">
           <div class="about-image">
-            <img src="img/portrait/tosinpeter.png" alt="about">
+            <img src="https://wheaddle.sirv.com/tosinmakanjuola/tosinpeter.png" alt="about">
           </div>
         </div>
       </div>

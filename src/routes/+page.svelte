@@ -6,6 +6,7 @@
   import ContactArea from "../lib/ContactArea.svelte";
 	import Footer from "..//lib/Footer.svelte";
 	import Header from "..//lib/Header.svelte";
+  import GallerySlider from "../lib/GallerySlider.svelte";
 
 	// import type { PageProps } from './$types';
 
@@ -41,9 +42,12 @@
 			</div>
       <About/>
 			<Gallery/>
-			<div class="section" data-anchor="fourth-section">
-				
+			<!-- <GallerySlider /> -->
+			 <!-- <div class="section" data-anchor="fourth-section">
 				<Testimonial {testimonials}/>
+			</div> -->
+			<div class="section" data-anchor="fourth-section">
+				<GallerySlider />
 			</div>
       
 			<div class="section" data-anchor="fifth-section">
