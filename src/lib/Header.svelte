@@ -34,7 +34,7 @@
               <li data-menuanchor="first-section" class="active"><a href="#first-section">Welcome</a></li>
               <li data-menuanchor="second-section"><a href="#second-section">About</a></li>
               <li data-menuanchor="third-section"><a href="#third-section">Portfolios</a></li>
-              <li data-menuanchor="fourth-section"><a href="#fourth-section">Testimonials</a></li>
+              <li data-menuanchor="fourth-section"><a href="#fourth-section">Gallery</a></li>
               <li data-menuanchor="fifth-section"><a href="#fifth-section">Contact</a></li>
             </ul>
           </nav>
