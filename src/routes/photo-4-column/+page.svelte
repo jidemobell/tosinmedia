@@ -85,10 +85,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-1.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-1.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-1.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu" ><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-1.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu" ><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -100,10 +100,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-2.jpg" alt="portfolio">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-2.jpg" alt="portfolio">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-2.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-2.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -115,10 +115,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-3.jpg" alt="portfolio">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-3.jpg" alt="portfolio">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-3.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-3.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -130,10 +130,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-4.jpg" alt="portfolio">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-4.jpg" alt="portfolio">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-4.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-4.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -145,10 +145,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-5.jpg" alt="portfolio">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-5.jpg" alt="portfolio">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-5.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-5.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -160,10 +160,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-6.jpg" alt="portfolio">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-6.jpg" alt="portfolio">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-6.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-6.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -175,10 +175,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-7.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-7.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-7.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-7.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -190,10 +190,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-8.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-8.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-8.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-8.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -205,10 +205,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-9.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-9.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-9.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-9.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -220,10 +220,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-10.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-10.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-10.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-10.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -235,10 +235,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-graphic">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-11.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-11.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-11.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-11.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -250,10 +250,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-12.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-12.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-12.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-12.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>
@@ -265,10 +265,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-13.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-13.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-13.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-13.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
 									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
 								</div>
@@ -280,10 +280,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-14.jpg" alt="portfolio">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-14.jpg" alt="portfolio">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-14.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-14.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
 									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
 								</div>
@@ -295,10 +295,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-15.jpg" alt="portfolio">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-15.jpg" alt="portfolio">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-15.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-15.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="/photo-details">AWESOME RACING CAR</a></h5>
 									<h6><a href="/photo-gallery">PORTFOLIO</a></h6>
 								</div>
@@ -310,10 +310,10 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 col-12 portfolio-item portfolio-filter-photoshop portfolio-filter-design">
 							<div class="portfolio">
 								<div class="portfolio-image">
-									<img src="img/portfolio/portfolio-image-16.jpg" alt="portfolio ">
+									<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-16.jpg" alt="portfolio ">
 								</div>
 								<div class="portfolio-content">
-									<a href="img/portfolio/lz-size/portfolio-image-lg-16.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
+									<a href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-16.jpg" class="portfolio-zoom-button" aria-label="Open navigation menu"><i class="fa fa-search-plus"></i></a>
 									<h5><a href="photo-details.html">AWESOME RACING CAR</a></h5>
 									<h6><a href="photo-gallery.html">PORTFOLIO</a></h6>
 								</div>

@@ -167,7 +167,7 @@
 								<div class="row align-items-end">
 									<div class="col-xl-7 col-lg-6 col-12">
 										<div class="g-photo-image">
-											<img src="img/portfolio/portfolio-image-6.jpg" alt="portfolio">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-6.jpg" alt="portfolio">
 										</div>
 									</div>
 									<div class="col-xl-5 col-lg-6 col-12">
@@ -184,7 +184,7 @@
 								<div class="row align-items-end">
 									<div class="col-xl-7 col-lg-6 col-12">
 										<div class="g-photo-image">
-											<img src="img/portfolio/portfolio-image-7.jpg" alt="portfolio">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-7.jpg" alt="portfolio">
 										</div>
 									</div>
 									<div class="col-xl-5 col-lg-6 col-12">
@@ -201,7 +201,7 @@
 								<div class="row align-items-end">
 									<div class="col-xl-7 col-lg-6 col-12">
 										<div class="g-photo-image">
-											<img src="img/portfolio/portfolio-image-3.jpg" alt="portfolio">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-3.jpg" alt="portfolio">
 										</div>
 									</div>
 									<div class="col-xl-5 col-lg-6 col-12">
@@ -218,7 +218,7 @@
 								<div class="row align-items-end">
 									<div class="col-xl-7 col-lg-6 col-12">
 										<div class="g-photo-image">
-											<img src="img/portfolio/portfolio-image-4.jpg" alt="portfolio">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-4.jpg" alt="portfolio">
 										</div>
 									</div>
 									<div class="col-xl-5 col-lg-6 col-12">
@@ -235,7 +235,7 @@
 								<div class="row align-items-end">
 									<div class="col-xl-7 col-lg-6 col-12">
 										<div class="g-photo-image">
-											<img src="img/portfolio/portfolio-image-5.jpg" alt="portfolio">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-5.jpg" alt="portfolio">
 										</div>
 									</div>
 									<div class="col-xl-5 col-lg-6 col-12">
@@ -263,19 +263,19 @@
 								<div class="col-lg-6 order-1 order-lg-2">
 									<div class="row g-photo-thumbs">
 										<div class="col-lg-12">
-											<img src="img/portfolio/portfolio-image-6.jpg" alt="portfolio thumb">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-6.jpg" alt="portfolio thumb">
 										</div>
 										<div class="col-lg-12">
-											<img src="img/portfolio/portfolio-image-7.jpg" alt="portfolio thumb">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-7.jpg" alt="portfolio thumb">
 										</div>
 										<div class="col-lg-12">
-											<img src="img/portfolio/portfolio-image-3.jpg" alt="portfolio thumb">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-3.jpg" alt="portfolio thumb">
 										</div>
 										<div class="col-lg-12">
-											<img src="img/portfolio/portfolio-image-4.jpg" alt="portfolio thumb">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-4.jpg" alt="portfolio thumb">
 										</div>
 										<div class="col-lg-12">
-											<img src="img/portfolio/portfolio-image-5.jpg" alt="portfolio thumb">
+											<img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-5.jpg" alt="portfolio thumb">
 										</div>
 									</div>
 								</div>

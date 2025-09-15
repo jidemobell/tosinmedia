@@ -4,23 +4,23 @@ const firebaseUrl = 'https://petermark-9ba50-default-rtdb.firebaseio.com/gallery
 
 const images = [
   {
-    url: "https://wheaddle.sirv.com/tosinmakanjuola/gallery/portfolio-image-1.jpg",
+    url: "https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-1.jpg",
     alt: "Portfolio Image 1"
   },
   {
-    url: "https://wheaddle.sirv.com/tosinmakanjuola/gallery/portfolio-image-2.jpg",
+    url: "https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-2.jpg",
     alt: "Portfolio Image 2"
   },
   {
-    url: "https://wheaddle.sirv.com/tosinmakanjuola/gallery/portfolio-image-3.jpg",
+    url: "https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-3.jpg",
     alt: "Portfolio Image 3"
   },
   {
-    url: "https://wheaddle.sirv.com/tosinmakanjuola/gallery/portfolio-image-4.jpg",
+    url: "https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-4.jpg",
     alt: "Portfolio Image 4"
   },
   {
-    url: "https://wheaddle.sirv.com/tosinmakanjuola/gallery/portfolio-image-5.jpg",
+    url: "https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-5.jpg",
     alt: "Portfolio Image 5"
   }
   // Add more as needed

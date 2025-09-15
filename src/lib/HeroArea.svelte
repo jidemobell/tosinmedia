@@ -20,14 +20,14 @@
    </video> -->
    <!-- <video id="background-video" autoplay loop muted> -->
     <!-- <source src="img/videos/output_video.webm" type="video/webm"> -->
-    <!-- <source src="https://wheaddle.sirv.com/tosinmakanjuola/IntroAmen.webm" type="video/mp4"> -->
+    <!-- <source src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/IntroAmen.webm" type="video/mp4"> -->
   <!-- </video> -->
 
     <!-- Hero Area Single Slide: Video or Image -->
     {#if !isMobile}
       <!-- Show video for non-mobile viewports -->
       <video id="background-video" autoplay loop muted>
-        <source src="https://wheaddle.sirv.com/tosinmakanjuola/IntroAmen.webm" type="video/mp4">
+        <source src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/IntroAmen.webm" type="video/mp4">
       </video>
     {:else}
       <!-- Show image for mobile viewports -->

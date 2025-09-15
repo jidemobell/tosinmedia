@@ -83,13 +83,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-1.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-1.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-1.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-1.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -108,13 +108,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-2.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-2.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-2.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-2.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -133,13 +133,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-3.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-3.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-3.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-3.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -158,13 +158,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-4.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-4.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-4.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-4.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -183,13 +183,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-5.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-5.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-5.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-5.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -208,13 +208,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-6.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-6.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-6.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-6.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -233,13 +233,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-7.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-7.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-7.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-7.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -258,13 +258,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-8.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-8.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-8.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-8.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -283,13 +283,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-9.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-9.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-9.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-9.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -308,13 +308,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-10.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-10.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-10.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-10.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -333,13 +333,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-11.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-11.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-11.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-11.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
@@ -358,13 +358,13 @@
               <div class="portfolio">
                 <div class="portfolio-image">
                   <img
-                    src="img/portfolio/portfolio-image-12.jpg"
+                    src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-12.jpg"
                     alt="portfolio"
                   />
                 </div>
                 <div class="portfolio-content">
                   <a
-                    href="img/portfolio/lz-size/portfolio-image-lg-12.jpg"
+                    href="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/gallery/portfolio-image-12.jpg"
                     class="portfolio-zoom-button"
                     aria-label="Open navigation menu"
                     ><i class="fa fa-search-plus"></i></a
