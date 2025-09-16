@@ -1182,17 +1182,32 @@ blockquote {
 }
 
 .bg-image-0 {
-  background-image: url(https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/hero/eriggal.png);
+  background-image: url(https://ik.imagekit.io/jidemobell2025/tr:w-1920,q-85,f-webp/tosinmakanjuola/hero/eriggal.png);
   /* filter: blur(5px); */
 }
 
 .bg-image-1 {
-  background-image: url(https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/hero/sallygap.jpg);
+  background-image: url(https://ik.imagekit.io/jidemobell2025/tr:w-1920,q-85,f-webp/tosinmakanjuola/hero/sallygap.jpg);
   /* filter: blur(5px); */
 }
 
 .bg-image-2 {
-  background-image: url(https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/hero/bg-image-2.jpg);
+  background-image: url(https://ik.imagekit.io/jidemobell2025/tr:w-1920,q-85,f-webp/tosinmakanjuola/hero/bg-image-2.jpg);
+}
+
+/* Mobile optimized background images */
+@media (max-width: 768px) {
+  .bg-image-0 {
+    background-image: url(https://ik.imagekit.io/jidemobell2025/tr:w-768,q-80,f-webp/tosinmakanjuola/hero/eriggal.png);
+  }
+  
+  .bg-image-1 {
+    background-image: url(https://ik.imagekit.io/jidemobell2025/tr:w-768,q-80,f-webp/tosinmakanjuola/hero/sallygap.jpg);
+  }
+  
+  .bg-image-2 {
+    background-image: url(https://ik.imagekit.io/jidemobell2025/tr:w-768,q-80,f-webp/tosinmakanjuola/hero/bg-image-2.jpg);
+  }
 }
 
 /* .bg-image-3 {

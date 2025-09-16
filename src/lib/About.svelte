@@ -1,3 +1,7 @@
+<script>
+  import OptimizedImage from './components/OptimizedImage.svelte';
+</script>
+
 <div class="section" data-anchor="second-section">
 
   <!-- bg-image-4 -->
@@ -20,7 +24,13 @@
         </div>
         <div class="col-lg-6 col-12 order-1 order-lg-2">
           <div class="about-image">
-            <img src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/tosinpeter.png" alt="about">
+            <OptimizedImage 
+              src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/tosinpeter.png" 
+              alt="about"
+              type="about"
+              width={600}
+              quality={90}
+            />
           </div>
         </div>
       </div>

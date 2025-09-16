@@ -38,6 +38,7 @@ async function seedGallery() {
       })
     });
     const result = await res.json();
+    console.log('Response from Firebase:', result);
     console.log(`Added: ${img.url} (id: ${result.name})`);
   }
 }
