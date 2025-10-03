@@ -21,7 +21,7 @@
                       SvelteKit
                     </a> 
                     by 
-                    <a href="https://github.com/jidemobell" target="_blank" rel="noopener noreferrer">JideMobell</a>. 
+                    <a href="www.jidemobell.dev" target="_blank" rel="noopener noreferrer">JideMobell</a>. 
                     Original design by <a href="https://photoghor.com/" target="_blank" rel="noopener noreferrer">Photoghor</a>.
                   </p>
               </div>
