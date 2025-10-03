@@ -28,7 +28,7 @@
     if (images.length > 0 && !isSliderInitialized && typeof window !== 'undefined' && window.$) {
       setTimeout(() => {
         initializeSlider();
-      }, 100);
+      }, 300);
     }
   });
 
@@ -83,7 +83,7 @@
     isSliderInitialized = false;
     setTimeout(() => {
       initializeSlider();
-    }, 50);
+    }, 200);
   }
 
   // Force initialization function (can be called manually)

@@ -1,23 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
-
-  let isMobile = true; // Start as mobile by default for safety
-
-  // Detect if the viewport is mobile
-  onMount(() => {
-    const checkMobile = () => {
-      isMobile = window.innerWidth <= 991; // Use same breakpoint as meanmenu (991px)
-    };
-    
-    checkMobile(); // Check immediately
-    
-    // Also check on resize
-    window.addEventListener('resize', checkMobile);
-    
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
-  });
+  // No script needed for static images
 </script>
 
 
@@ -34,17 +16,8 @@
     <!-- <source src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/IntroAmen.webm" type="video/mp4"> -->
   <!-- </video> -->
 
-    <!-- Hero Area Single Slide: Video or Image -->
-    {#if !isMobile}
-      <!-- Show video for non-mobile viewports -->
-      <div class="hero-video-container desktop-only">
-        <video id="background-video" autoplay loop muted>
-          <source src="https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/IntroAmen.webm" type="video/mp4">
-        </video>
-      </div>
-    {:else}
-      <!-- Show image for mobile viewports -->
-       <div class="hero-single-slide bg-image-0">
+    <!-- Hero Area Single Slide: Static Image -->
+    <div class="hero-single-slide bg-image-0">
       <div class="container">
         <div class="hero-slide-text">
           <h1>Stay With Your <br>Dream & Passion</h1>
@@ -52,7 +25,6 @@
         </div>
       </div>
     </div>
-    {/if}
     <!--// Hero Area Single Slide -->
   
     <!--// Hero Area Single Slide -->
