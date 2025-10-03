@@ -229,6 +229,15 @@
 		responsiveWidth: 991,
 		scrollOverflow: true,
 		scrollBar: false,
+		scrollingSpeed: 400,
+		easingcss3: 'ease-out',
+		autoScrolling: true,
+		fitToSection: false,
+		animateAnchor: false,
+		recordHistory: true,
+		keyboardScrolling: true,
+		touchSensitivity: 5,
+		normalScrollElementTouchThreshold: 5,
 		onLeave: function(index, nextIndex, direction){
             if(nextIndex > 1 && direction =='down'){
                 $('.header').addClass('is-sticky');
