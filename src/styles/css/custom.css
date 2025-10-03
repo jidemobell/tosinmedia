@@ -5,3 +5,35 @@
 .mean-bar + .mean-bar {
     display: none !important;
 }
+
+/* Hero Video Mobile Fix - Never show video on mobile */
+@media (max-width: 991px) {
+    #background-video,
+    .hero-video-container,
+    .desktop-only {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Ensure hero slider shows properly on mobile */
+    .hero-area .hero-slider {
+        display: block !important;
+    }
+}
+
+/* Desktop video styling */
+@media (min-width: 992px) {
+    .hero-video-container {
+        display: block !important;
+    }
+    
+    #background-video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
