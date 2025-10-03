@@ -1,1 +1,7 @@
 @charset "UTF-8";
+
+/* Simple fix: Hide the second (duplicate) mean bar */
+.mean-bar:nth-child(2),
+.mean-bar + .mean-bar {
+    display: none !important;
+}
