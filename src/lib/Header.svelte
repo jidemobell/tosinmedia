@@ -20,7 +20,7 @@
       <div class="header-inner d-none d-lg-flex">
         <div class="header-logo">
           <a href="/">
-            <img src="img/logo/petermarkwhite4.png" alt="logo" style="height: 20px;">
+            <img src="img/logo/petermark3.svg" alt="THEPETERMAK logo" style="height: 32px;">
           </a>
         </div>
         <div class="header-navigation">
@@ -59,7 +59,7 @@
       <div class="mobile-menu-wrapper d-block d-lg-none">
         <div class="mobile-menu clearfix">
           <a href="/" class="mobile-logo">
-            <img src="img/logo/petermarkwhite4.png" alt="mobile logo">
+            <img src="img/logo/petermark3.svg" alt="THEPETERMAK mobile logo">
           </a>
         </div>
       </div>
