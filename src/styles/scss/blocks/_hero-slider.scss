@@ -1,0 +1,207 @@
+/**
+ * Hero Slider
+ */
+
+.hero-area{
+    position: relative;
+    .hero-silder-active {
+        margin-bottom: 0;
+    }
+}
+
+.hero-single-slide{
+    min-height: 100vh;
+    padding-top: 100px;
+    display: flex !important;
+    align-items: center;
+    overflow: hidden;
+    
+    .hero-slide-text{
+        color: #ffffff;
+        padding-top: 90px;
+        overflow: hidden;
+        h1, h2, h3, h4, h5, h6, p{
+            color: #ffffff;
+        }
+        h1{
+            font-size: 60px;
+            line-height: 65px;
+            transform: translateX(-100%);
+            transition: all 1s ease-in-out 0.3s;
+        }
+        p{
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 0;
+            transform: translateX(-100%);
+            transition: all 1s ease-in-out 0.5s;
+        }
+    }
+
+    @media #{$lg-layout}{
+        .hero-slide-text{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            h1{
+                font-size: 48px;
+                line-height: 52px;
+            }
+        }
+    }
+
+    @media #{$md-layout}{
+        padding-top: 70px;
+
+        .hero-slide-text{
+            padding-top: 40px;
+            padding-bottom: 40px;
+            h1{
+                font-size: 38px;
+                line-height: 42px;
+            }
+        }
+    }
+
+    @media #{$sm-layout}{
+        padding-top: 70px;
+
+        .hero-slide-text{
+            padding-top: 30px;
+            padding-bottom: 120px;
+            h1{
+                font-size: 32px;
+                line-height: 36px;
+            }
+        }
+    }
+
+}
+
+.slick-active{
+    .hero-single-slide{
+        .hero-slide-text{
+            h1, p{
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.hero-area-outer{
+    position: absolute;
+    bottom: 14%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+
+    .social-icons{
+        bottom: 0;
+        &::before{
+            content: "";
+            display: inline-block;
+            height: 1px;
+            width: 40px;
+            background: #ffffff;
+        }
+        ul{
+            display: inline-block;
+            li{
+                margin: 0 15px;
+                a{
+                    font-size: 18px;
+                    color: #ffffff;
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-pagination{
+        text-align: right;
+        ul.hero-pagination-dots{
+            position: relative;
+            bottom: 0;
+            padding-left: 0;
+            margin-bottom: 0;
+            li{
+                display: inline-block;
+                font-size: 24px;
+                text-align: right;
+                height: auto;
+                width: auto;
+                padding: 0;
+                color: #ffffff;
+                font-size: 18px;
+                letter-spacing: 1px;
+                line-height: 20px;
+                &::after{
+                    content: "/";
+                    padding: 0 7px;
+                }
+                &:last-child{
+                    &::after{
+                        display: none;
+                    }
+                }
+                button{
+                    color: #ffffff;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                    transition: all 0.4s ease-in-out 0s;
+                    &::before{
+                        content: "0";
+                    }
+                }
+                &.slick-active{
+                    button{
+                        color: $theme-color;
+                        font-weight: 600;
+                    }
+                }
+                &:hover{
+                    button{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$lg-layout}{
+        bottom: 30px;
+    }
+
+    @media #{$md-layout}{
+        bottom: 20px;
+    }
+
+    @media #{$sm-layout}{
+        bottom: 20px;
+
+        .hero-pagination{
+            text-align: left;
+        }
+
+        .social-icons{
+            &::before{
+                display: none;
+            }
+            ul{
+                li{
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    &::last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

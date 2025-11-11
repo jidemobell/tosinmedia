@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/* Simple fix: Hide the second (duplicate) mean bar */
+.mean-bar:nth-child(2),
+.mean-bar + .mean-bar {
+    display: none !important;
+}
+
+/* Hero Video Mobile Fix - Never show video on mobile */
+@media (max-width: 991px) {
+    #background-video,
+    .hero-video-container,
+    .desktop-only {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Ensure hero slider shows properly on mobile */
+    .hero-area .hero-slider {
+        display: block !important;
+    }
+}
+
+/* Desktop video styling */
+@media (min-width: 992px) {
+    .hero-video-container {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
+    #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center center;
+        z-index: -1;
+    }
+    
+    /* Ensure hero content appears over video */
+    .hero-area .container,
+    .hero-slide-text {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure hero area is full height */
+    .hero-area {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .hero-slider {
+        height: 100vh;
+    }
+    
+    /* Video fallback sizing for different aspect ratios */
+    @supports not (object-fit: cover) {
+        #background-video {
+            width: 100vw;
+            height: 56.25vw; /* 16:9 aspect ratio */
+            min-height: 100vh;
+            min-width: 177.78vh; /* 16:9 aspect ratio */
+        }
+    }
+    
+    /* Force video to be visible and properly sized */
+    #background-video {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Ensure first section has video background */
+    .section[data-anchor="first-section"] {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Smooth scroll improvements */
+    html {
+        scroll-behavior: auto !important;
+    }
+    
+    #fp-nav ul li a span,
+    #fp-nav ul li:hover a.active span {
+        background: rgba(255, 255, 255, 0.8) !important;
+    }
+}

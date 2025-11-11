@@ -1,0 +1,61 @@
+/**
+ * Forms
+ */
+
+.photoghor-form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .photoghor-form-input{
+        flex: 0 0 100%;
+        width: 100%;
+        margin-top: 25px;
+        overflow: hidden;
+        &.photoghor-form-input-half{
+            flex: 0 0 calc(50% - 15px);
+            width: calc(50% - 15px);
+        }
+        textarea{
+            min-height: 150px;
+        }
+        input, textarea, select{
+            font-family: $body-font;
+            border: none;
+            background: transparent;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #d5d5d5;
+            padding: 0;
+            &:focus, &:active{
+                border-bottom: 1px solid $theme-color;
+            }
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+                transition: background-color 5000s ease-in-out 0s;
+            }
+        }
+        [type="submit"]{
+            margin-top: 15px;
+        }
+    }
+
+}
+
+.photoghor-form-boxed{
+    padding: 30px;
+    border: 1px solid #dddddd;
+}
+
+@media #{$sm-layout}{
+    .photoghor-form-inner{
+        .photoghor-form-input{
+            &.photoghor-form-input-half{
+                flex: 0 0 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
