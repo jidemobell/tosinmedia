@@ -20,13 +20,6 @@
     
     return () => observer.disconnect();
   });
-  
-  const stats = [
-    { number: '10+', label: 'Years Experience' },
-    { number: '500+', label: 'Happy Clients' },
-    { number: '1000+', label: 'Projects Completed' },
-    { number: '50+', label: 'Awards Won' }
-  ];
 </script>
 
 <section id="about-modern" class="about-modern section-padding-xlg" class:visible={isVisible}>
@@ -73,16 +66,6 @@
               Photography isn't just about capturing what's in front of the lens—it's about revealing the emotion, 
               the connection, and the beauty that exists in every moment. That's what drives my work.
             </p>
-          </div>
-          
-          <!-- Stats -->
-          <div class="stats-grid">
-            {#each stats as stat, index}
-              <div class="stat-item" style="--delay: {index * 0.1}s">
-                <div class="stat-number">{stat.number}</div>
-                <div class="stat-label">{stat.label}</div>
-              </div>
-            {/each}
           </div>
           
           <!-- CTA -->
@@ -253,44 +236,6 @@
     color: #333 !important;
   }
   
-  /* Stats Grid */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin: 50px 0;
-    padding: 40px 0;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  
-  .stat-item {
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
-  }
-  
-  .about-modern.visible .stat-item {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: calc(0.5s + var(--delay));
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #d4af37;
-    margin-bottom: 10px;
-  }
-  
-  .stat-label {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #666;
-  }
-  
   /* CTA Buttons */
   .about-cta {
     display: flex;
@@ -383,11 +328,6 @@
     .about-content {
       transform: none;
     }
-    
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
   }
   
   @media (max-width: 768px) {
@@ -397,14 +337,6 @@
     
     .container {
       padding: 0 20px;
-    }
-    
-    .stats-grid {
-      padding: 30px 0;
-    }
-    
-    .stat-number {
-      font-size: 2rem;
     }
     
     .about-cta {
