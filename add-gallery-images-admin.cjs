@@ -1,23 +1,56 @@
 #!/usr/bin/env node
 /**
- * Firebase Gallery Image Uploader
- * 
- * This script helps you batch-add images to Firebase Realtime Database.
- * 
- * Usage:
- *   1. Edit the imageUrls array below with your image URLs
- *   2. Run: node add-gallery-images.js
+ * Authenticated Firebase Admin uploader
+ * Use this instead of the unauthenticated script when your Realtime DB rules require auth.
+ *
+ * Setup:
+ * 1. Create a Service Account in Firebase Console -> Project Settings -> Service Accounts -> Generate new private key
+ *    Save the JSON file as `serviceAccountKey.json` in this folder (or keep it somewhere safe and set env var below).
+ *
+ * 2a. Either set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of the JSON file, e.g.:
+ *    export GOOGLE_APPLICATION_CREDENTIALS="/path/to/serviceAccountKey.json"
+ *
+ * 2b. Or copy the JSON file to this folder and name it serviceAccountKey.json (not recommended for long-term storage in repo).
+ *
+ * 3. Install firebase-admin in your environment (one-time):
+ *    npm install firebase-admin
+ *
+ * 4. Run:
+ *    node add-gallery-images-admin.cjs
  */
 
-const https = require('https');
+const fs = require('fs');
+const path = require('path');
 
-// Firebase Configuration
-const FIREBASE_URL = 'https://petermark-9ba50-default-rtdb.firebaseio.com/gallery.json';
+// Try to load credentials from env var or local file
+let serviceAccountPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+if (!serviceAccountPath) {
+  const localPath = path.join(__dirname, 'serviceAccountKey.json');
+  if (fs.existsSync(localPath)) serviceAccountPath = localPath;
+}
 
-// Add your image URLs here
-// You can add OneDrive embed links or ImageKit URLs
+if (!serviceAccountPath) {
+  console.error('\n❌ No service account key found.');
+  console.error('   Set GOOGLE_APPLICATION_CREDENTIALS to the JSON key path or place serviceAccountKey.json in this folder.\n');
+  process.exit(1);
+}
+
+const admin = require('firebase-admin');
+
+try {
+  admin.initializeApp({
+    credential: admin.credential.cert(require(serviceAccountPath)),
+    databaseURL: 'https://petermark-9ba50-default-rtdb.firebaseio.com'
+  });
+} catch (err) {
+  console.error('Failed to initialize Firebase Admin:', err.message);
+  process.exit(1);
+}
+
+const db = admin.database();
+
+// Reuse the same image list as in add-gallery-images.cjs
 const imageUrls = [
-  // Provided ImageKit URLs (deduplicated) with simple alt text derived from filenames
   { url: 'https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/new_previews/lifestyle-portrait-25.jpg?updatedAt=1762908684723', alt: 'lifestyle portrait 25' },
   { url: 'https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/new_previews/wedding-manso-fabiola-9.jpg?updatedAt=1762908684333', alt: 'wedding manso fabiola 9' },
   { url: 'https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/new_previews/lifestyle-portrait-26.jpg?updatedAt=1762908684634', alt: 'lifestyle portrait 26' },
@@ -59,69 +92,24 @@ const imageUrls = [
   { url: 'https://ik.imagekit.io/jidemobell2025/tosinmakanjuola/new_previews/event-portrait-1.jpg?updatedAt=1762908673864', alt: 'event portrait 1' }
 ];
 
-// Function to add images to Firebase
-async function addImagesToFirebase() {
-  if (imageUrls.length === 0) {
-    console.log('\n⚠️  No images to add!');
-    console.log('📝 Please edit the imageUrls array in this script and add your image URLs.\n');
-    console.log('Example format:');
-    console.log('  { url: "https://your-image-url.jpg", alt: "Description" }\n');
-    return;
-  }
+async function run() {
+  console.log(`\n🚀 Adding ${imageUrls.length} images to Firebase (authenticated)...\n`);
+  const ref = db.ref('gallery');
 
-  console.log(`\n🚀 Adding ${imageUrls.length} images to Firebase...\n`);
-
-  for (let i = 0; i < imageUrls.length; i++) {
-    const image = imageUrls[i];
-    const data = JSON.stringify({
-      url: image.url,
-      alt: image.alt,
-      createdAt: Date.now()
-    });
-
+  for (const img of imageUrls) {
     try {
-      await postToFirebase(data);
-      console.log(`✅ Added: ${image.alt}`);
-    } catch (error) {
-      console.error(`❌ Failed to add ${image.alt}:`, error.message);
+      const snapshot = await ref.push({ url: img.url, alt: img.alt, createdAt: Date.now() });
+      console.log(`✅ Added: ${img.alt} (key: ${snapshot.key})`);
+    } catch (err) {
+      console.error(`❌ Failed to add ${img.alt}:`, err.message || err);
     }
   }
 
-  console.log('\n✨ Done! Check your gallery at:');
-  console.log('   https://petermark-9ba50-default-rtdb.firebaseio.com/gallery.json\n');
+  console.log('\n✨ All done. Verify entries in Realtime DB -> /gallery');
+  process.exit(0);
 }
 
-// Helper function to POST to Firebase
-function postToFirebase(data) {
-  return new Promise((resolve, reject) => {
-    const url = new URL(FIREBASE_URL);
-    const options = {
-      hostname: url.hostname,
-      path: url.pathname,
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': data.length
-      }
-    };
-
-    const req = https.request(options, (res) => {
-      let body = '';
-      res.on('data', (chunk) => body += chunk);
-      res.on('end', () => {
-        if (res.statusCode === 200) {
-          resolve(JSON.parse(body));
-        } else {
-          reject(new Error(`HTTP ${res.statusCode}: ${body}`));
-        }
-      });
-    });
-
-    req.on('error', reject);
-    req.write(data);
-    req.end();
-  });
-}
-
-// Run the script
-addImagesToFirebase().catch(console.error);
+run().catch(err => {
+  console.error('Uploader failed:', err);
+  process.exit(1);
+});

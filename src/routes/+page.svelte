@@ -6,7 +6,6 @@
   import ContactArea from "../lib/ContactArea.svelte";
 	import Footer from "..//lib/Footer.svelte";
 	import Header from "..//lib/Header.svelte";
-  import GallerySlider from "../lib/GallerySlider.svelte";
 
 	// import type { PageProps } from './$types';
 
@@ -16,6 +15,22 @@
 	const {testimonials} = data;
 	// console.log('Testimonials:', testimonials);
 </script>
+
+<svelte:head>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+		#main-content > div {
+			min-height: 100vh;
+			position: relative;
+		}
+		#main-content > div:nth-child(3) {
+			min-height: auto;
+		}
+	</style>
+</svelte:head>
+
 <main>
 	<!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -26,34 +41,29 @@
 	<div id="wrapper" class="wrapper">
 		<span id="home"></span>
 		<!-- <Header /> -->
-		<!-- Fullpage Area Name -->
+		<!-- Page Navigation -->
 		<ul id="section-name" class="section-name">
-			<li data-menuanchor="first-section" class="active"><a href="#first-section">Welcome</a></li>
-			<li data-menuanchor="second-section"><a href="#second-section">About</a></li>
-			<li data-menuanchor="third-section"><a href="#third-section">Portfolios</a></li>
-			<li data-menuanchor="fourth-section"><a href="#fourth-section">Testimonials</a></li>
-			<li data-menuanchor="fifth-section"><a href="#fifth-section">Contact</a></li>
+			<li class="active"><a href="#first-section">Welcome</a></li>
+			<li><a href="#second-section">About</a></li>
+			<li><a href="#third-section">Portfolio</a></li>
+			<li><a href="#fourth-section">Contact</a></li>
 		</ul>
-		<!--// Fullpage Area Name -->
+		<!--// Page Navigation -->
 
-		<div id="fullpage">
-			<div class="section" data-anchor="first-section">
+		<div id="main-content">
+			<div id="first-section">
 			 <HeroAreaModern/>
 			</div>
 			
-			<div class="section" data-anchor="second-section">
+			<div id="second-section">
       	<AboutModern/>
 			</div>
 			
-			<div class="section" data-anchor="third-section">
+			<div id="third-section">
 				<GalleryModern/>
 			</div>
 			
-			<div class="section" data-anchor="fourth-section">
-				<GallerySlider />
-			</div>
-      
-			<div class="section" data-anchor="fifth-section">
+			<div id="fourth-section">
 				<!-- Contact Area -->
 				<ContactArea/>
 				<!--// Contact Area -->

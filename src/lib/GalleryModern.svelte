@@ -3,7 +3,15 @@
   
   let selectedImage = null;
   let isLoading = true;
-  let images = [];
+  let allImages = [];
+  let displayedImages = [];
+  let imagesPerPage = 12;
+  let currentPage = 0;
+  let hasMore = false;
+  let totalPages = 0;
+  
+  $: hasMore = allImages.length > 0 && currentPage < totalPages;
+  $: hasPrevious = currentPage > 1;
   
   onMount(async () => {
     // Fetch images from Firebase
@@ -12,16 +20,48 @@
         "https://petermark-9ba50-default-rtdb.firebaseio.com/gallery.json"
       );
       const data = await res.json();
-      images = Object.entries(data || {}).map(([id, value]) => ({
+      allImages = Object.entries(data || {}).map(([id, value]) => ({
         id,
         ...value,
       }));
+      console.log('Total images fetched:', allImages.length);
+      // Sort by createdAt (newest first) for consistent ordering
+      allImages.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+      // Calculate total pages
+      totalPages = Math.ceil(allImages.length / imagesPerPage);
+      // Load first page
+      loadPage(1);
+      console.log('Loaded page 1 of', totalPages, '- showing:', displayedImages.length);
     } catch (error) {
       console.error('Error fetching images:', error);
     } finally {
       isLoading = false;
     }
   });
+  
+  function loadPage(page) {
+    const start = (page - 1) * imagesPerPage;
+    const end = start + imagesPerPage;
+    displayedImages = allImages.slice(start, end);
+    currentPage = page;
+    console.log('Page', page, 'loaded - showing:', displayedImages.length, 'images');
+    // Scroll to top of gallery
+    if (page > 1) {
+      document.getElementById('portfolio-modern')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  
+  function nextPage() {
+    if (currentPage < totalPages) {
+      loadPage(currentPage + 1);
+    }
+  }
+  
+  function previousPage() {
+    if (currentPage > 1) {
+      loadPage(currentPage - 1);
+    }
+  }
   
   function openModal(image) {
     selectedImage = image;
@@ -61,10 +101,10 @@
       </div>
     {:else}
       <div class="gallery-grid">
-        {#each images as image, index}
+        {#each displayedImages as image, index (image.id)}
           <div 
             class="gallery-item"
-            style="--delay: {index * 0.1}s"
+            style="--delay: {index}s"
             on:click={() => openModal(image)}
             on:keydown={(e) => e.key === 'Enter' && openModal(image)}
             tabindex="0"
@@ -73,12 +113,12 @@
             <div class="image-wrapper">
               <img 
                 src={image.url}
-                alt={image.title || 'Gallery image'}
+                alt={image.alt || image.title || 'Gallery image'}
                 loading="lazy"
               />
               <div class="image-overlay">
                 <div class="overlay-content">
-                  <h3>{image.title || 'Untitled'}</h3>
+                  <h3>{image.title || image.alt || 'Untitled'}</h3>
                   {#if image.category}
                     <span class="category">{image.category}</span>
                   {/if}
@@ -94,6 +134,41 @@
           </div>
         {/each}
       </div>
+      
+      <!-- Pagination Controls -->
+      {#if totalPages > 1}
+        <div class="load-more-container">
+          <div class="pagination-controls">
+            <button 
+              class="pagination-btn" 
+              on:click={previousPage} 
+              disabled={!hasPrevious}
+              aria-label="Previous page"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              Previous
+            </button>
+            
+            <p class="images-count">
+              Page {currentPage} of {totalPages} • Showing {displayedImages.length} of {allImages.length} images
+            </p>
+            
+            <button 
+              class="pagination-btn" 
+              on:click={nextPage} 
+              disabled={!hasMore}
+              aria-label="Next page"
+            >
+              Next
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      {/if}
     {/if}
   </div>
 </section>
@@ -113,11 +188,16 @@
         <line x1="6" y1="6" x2="18" y2="18"></line>
       </svg>
     </button>
-    <div class="modal-content" on:click|stopPropagation>
-      <img src={selectedImage.url} alt={selectedImage.title || 'Gallery image'} />
-      {#if selectedImage.title}
+    <div 
+      class="modal-content" 
+      on:click|stopPropagation
+      on:keydown={(e) => e.key === 'Enter' && e.stopPropagation()}
+      role="presentation"
+    >
+      <img src={selectedImage.url} alt={selectedImage.alt || selectedImage.title || 'Gallery image'} />
+      {#if selectedImage.title || selectedImage.alt}
         <div class="modal-info">
-          <h3>{selectedImage.title}</h3>
+          <h3>{selectedImage.title || selectedImage.alt || 'Untitled'}</h3>
           {#if selectedImage.category}
             <span class="modal-category">{selectedImage.category}</span>
           {/if}
@@ -133,11 +213,15 @@
     background: #0a0a0a;
     color: #fff;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    height: auto;
+    padding-bottom: 60px;
+    margin-bottom: 0;
+    z-index: 1;
   }
   
   .section-padding-xlg {
-    padding: 120px 0;
+    padding: 120px 0 40px 0;
   }
   
   .container-fluid {
@@ -149,7 +233,7 @@
   /* Section Header */
   .section-header {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
   
   .section-tag {
@@ -203,32 +287,20 @@
   /* Gallery Grid - Masonry Layout */
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    grid-auto-flow: dense;
+    width: 100%;
+    grid-auto-rows: 250px;
   }
   
   .gallery-item {
     position: relative;
     cursor: pointer;
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
-    animation-delay: var(--delay);
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    opacity: 1;
   }
   
   /* Random heights for masonry effect */
-  .gallery-item:nth-child(3n + 1) {
+  .gallery-item:nth-child(4n + 1) {
     grid-row: span 2;
   }
   
@@ -414,6 +486,73 @@
     transform: rotate(90deg);
   }
   
+  /* Pagination Controls */
+  .load-more-container {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    clear: both;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  }
+  
+  .pagination-btn:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background: #555;
+    box-shadow: none;
+  }
+  
+  .pagination-btn svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .images-count {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+  }
+  
   /* Responsive */
   @media (max-width: 1200px) {
     .gallery-grid {
@@ -448,6 +587,19 @@
       right: 20px;
       width: 40px;
       height: 40px;
+    }
+    
+    .pagination-btn {
+      padding: 12px 24px;
+      font-size: 0.85rem;
+    }
+    
+    .pagination-controls {
+      gap: 15px;
+    }
+    
+    .load-more-container {
+      margin-top: 40px;
     }
   }
 </style>
